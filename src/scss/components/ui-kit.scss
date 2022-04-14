@@ -3,17 +3,7 @@
 	font-family: $font-Poppins;
 	font-weight: 700;
 
-	&--white {
-		color: $color-white;
-	}
-
-	&--center {
-		text-align: center;
-	}
-
 	span {
-
-
 		&:last-child {
 			color: $color-twitter;
 
@@ -25,6 +15,14 @@
 		@include desktop {
 			color: $color-white;
 		}
+	}
+
+	&--white {
+		color: $color-white;
+	}
+
+	&--center {
+		text-align: center;
 	}
 
 	@include desktop {
@@ -78,7 +76,6 @@
 
 	@include desktop {
 		&--lg {
-
 			font-size: vc(24);
 			line-height: vc(40);
 			letter-spacing: -0.4px;
@@ -149,8 +146,8 @@
 			font-weight: 600;
 			font-size: vc(18);
 			line-height: vc(72);
-			color: $color-white;
 			letter-spacing: -0.4px;
+			color: $color-white;
 		}
 	}
 
@@ -173,8 +170,8 @@
 
 	@include desktop {
 		&:hover {
-			color: $color-theme;
 			box-shadow: 0 8px 8px -4px rgba(69, 121, 245, 0.06), 0 2px 4px -1px rgba(27, 10, 82, 0.06), 0 0 1px 0 rgba(69, 121, 245, 0.12);
+			color: $color-theme;
 			background: $color-white;
 		}
 
@@ -218,9 +215,11 @@
 			padding: 0 vc(32);
 		}
 
-
 		@include mobile {
-			&--info, &--cards, &--banner, &--advantage {
+			&--info,
+			&--cards,
+			&--banner,
+			&--advantage {
 				padding: 0;
 			}
 
@@ -278,33 +277,34 @@
 	}
 
 	@include mobile {
-		&--5, &--3 {
+		&--5,
+		&--3 {
 			overflow: hidden;
 		}
 	}
 }
 
 .button {
-	flex-shrink: 0;
-	padding: vc(2) vc(2) vc(6);
-	border-radius: 14px;
-	background-image: linear-gradient(to right, #99d8ff 0%, #0bf 100%);
-	color: $color-white;
-	text-align: center;
-	transition: all 0.2s $easing-smooth;
 	$self: &;
+
+	flex-shrink: 0;
+	border-radius: 14px;
+	padding: vc(2) vc(2) vc(6);
+	text-align: center;
+	color: $color-white;
+	background-image: linear-gradient(to right, #99d8ff 0%, #0bf 100%);
+	transition: all 0.2s $easing-smooth;
 
 	&__inner {
 		border-radius: 12px;
 		padding: vc(12) vc(24);
 		width: vc(173);
+		box-shadow: 0 8px 8px -4px rgba(29, 161, 242, 0.12), 0 16px 24px 0 rgba(29, 161, 242, 0.24), 0 2px 4px -1px rgba(27, 10, 82, 0.12), 0 0 1px 0 rgba(29, 161, 242, 0.24);
 		font-family: $font-Montserrat;
 		font-weight: 600;
 		font-size: vc(16);
 		line-height: vc(24);
-		box-shadow: 0 8px 8px -4px rgba(29, 161, 242, 0.12), 0 16px 24px 0 rgba(29, 161, 242, 0.24), 0 2px 4px -1px rgba(27, 10, 82, 0.12), 0 0 1px 0 rgba(29, 161, 242, 0.24);
 		background-image: linear-gradient(106deg, #0bf, #1da1f2 51%, #4579f5);
-
 		transition: all 0.2s $easing-smooth;
 
 		.is-white & {
@@ -335,10 +335,10 @@
 		text-align: center;
 
 		#{$self}__inner {
+			border-radius: 24px;
+			padding: vc(24) 0;
 			width: vc(199);
 			height: vc(72);
-			padding: vc(24) 0;
-			border-radius: 24px;
 			font-size: vc(18);
 
 			@include mobile {
@@ -358,11 +358,10 @@
 	&--sm {
 		display: inline-block;
 
-
 		#{$self}__inner {
-			width: vc(195);
-			padding: vc(12) 0;
 			border-radius: 12px;
+			padding: vc(12) 0;
+			width: vc(195);
 			font-size: vc(16);
 		}
 
@@ -380,9 +379,9 @@
 		margin-right: vc(26);
 
 		#{$self}__inner {
-			width: vc(158);
-			padding: vc(12) 0;
 			border-radius: 12px;
+			padding: vc(12) 0;
+			width: vc(158);
 			font-size: vc(16);
 		}
 	}
@@ -391,17 +390,16 @@
 		background-image: linear-gradient(to right, #99d8ff 0%, #0bf 100%);
 
 		#{$self}__inner {
-			width: vc(160);
-			padding: vc(10) 0;
 			border: solid 2px transparent;
-			background: $color-white;
+			padding: vc(10) 0;
+			width: vc(160);
 			box-shadow: none;
 			color: #1da1f2;
+			background: $color-white;
 
 			&:hover {
 				border-color: #1da1f2;
 			}
-
 
 			.is-white & {
 				color: $color-white;
@@ -419,11 +417,6 @@
 		}
 	}
 
-	.is-white & {
-		background-color: #3d5b66;
-		background-image: none;
-	}
-
 	&--full {
 		margin: 0 vc(12);
 		width: vc(296);
@@ -433,14 +426,16 @@
 		}
 	}
 
+	.is-white & {
+		background-image: none;
+		background-color: #3d5b66;
+	}
+
 	@include desktop {
 		&:hover {
-
-			//padding: 0 2px 8px;
-
 			#{$self}__inner {
-				transform: translateY(-2px);
 				box-shadow: 0 12px 12px -4px rgba(0, 187, 255, 0.12), 0 24px 32px 0 rgba(0, 187, 255, 0.24), 0 4px 4px -1px rgba(10, 70, 82, 0.12), 0 1px 1px 0 rgba(0, 187, 255, 0.24);
+				transform: translateY(-2px);
 			}
 		}
 
@@ -477,9 +472,9 @@
 		border-radius: 24px;
 		width: vc(48);
 		height: vc(48);
+		color: rgba(20, 16, 41, 0.6);
 		background: transparent;
 		transition: all 0.5s $easing-smooth;
-		color: rgba(20, 16, 41, 0.6);
 
 		svg {
 			width: vc(24);
@@ -491,9 +486,9 @@
 			position: absolute;
 			left: 0;
 			top: vc(56);
+			border-radius: 24px;
 			padding: vc(24);
 			width: vc(339);
-			border-radius: 24px;
 			box-shadow: 0 8px 8px -4px rgba(20, 16, 41, 0.06), 0 2px 4px -1px rgba(20, 16, 41, 0.06), 0 0 1px 0 rgba(20, 16, 41, 0.12);
 			background-color: $color-white;
 			opacity: 0;
@@ -524,21 +519,17 @@
 			}
 
 			.is-white & {
-				backdrop-filter: blur(40px);
-				box-shadow: 8px 8px 24px 0 rgba(9, 13, 20, 0.4), -4px -4px 8px 0 rgba(224, 224, 255, 0.04), 0 1px 1px 0 rgba(9, 13, 20, 0.4);
 				border: solid 1px rgba(245, 247, 250, 0.06);
+				box-shadow: 8px 8px 24px 0 rgba(9, 13, 20, 0.4), -4px -4px 8px 0 rgba(224, 224, 255, 0.04), 0 1px 1px 0 rgba(9, 13, 20, 0.4);
 				background-image: linear-gradient(114deg, rgba(245, 247, 250, 0.12), rgba(245, 247, 250, 0.06) 52%, rgba(245, 247, 250, 0) 100%);
 				background-color: transparent;
+				backdrop-filter: blur(40px);
 			}
 
 			@include mobile {
 				left: auto;
 				right: vc(-83);
 			}
-		}
-
-		.is-white & {
-			color: #e0e0ff99;
 		}
 
 		&:hover {
@@ -555,6 +546,8 @@
 		}
 
 		.is-white & {
+			color: #e0e0ff99;
+
 			&:hover {
 				background-color: rgba(224, 224, 255, 0.06);
 
@@ -604,10 +597,9 @@
 
 		&--instagramm {
 			overflow: hidden;
-
 			background-image: radial-gradient(circle at 27% 108%, #fd5, #fd5 8%, #ff543e 38%, #c837ab 76%);
-			background-size: 106% 110%;
 			background-position: 0 -2px;
+			background-size: 106% 110%;
 
 			&::after {
 				content: "";
@@ -653,8 +645,8 @@
 		}
 
 		@include mobile {
-			margin-bottom: vc(38);
 			justify-content: space-between;
+			margin-bottom: vc(38);
 			width: 100%;
 		}
 	}

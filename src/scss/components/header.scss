@@ -102,9 +102,9 @@
 	&__switch {
 		position: relative;
 		display: flex;
+		flex-shrink: 0;
 		align-items: center;
 		justify-content: center;
-		flex-shrink: 0;
 		margin-right: vc(16);
 		border: solid 2px rgba(20, 16, 41, 0.8);
 		border-radius: 12px;
@@ -126,8 +126,6 @@
 		}
 
 		@include desktop {
-
-
 			@include desktop {
 				&:hover {
 					border-color: $color-wave2;
@@ -188,8 +186,8 @@
 	&__button {
 		@include desktop {
 			&:hover {
-				color: $color-theme;
 				box-shadow: 0 8px 8px -4px rgba(69, 121, 245, 0.06), 0 2px 4px -1px rgba(27, 10, 82, 0.06), 0 0 1px 0 rgba(69, 121, 245, 0.12);
+				color: $color-theme;
 				background: $color-white;
 			}
 		}
@@ -202,8 +200,8 @@
 	@include mobile {
 		padding: vc(16) vc(20);
 		width: 100%;
-		background: $color-white;
 		box-shadow: 0 8px 8px -4px rgba(20, 16, 41, 0.06), 0 2px 4px -1px rgba(20, 16, 41, 0.06), 0 0 1px 0 rgba(20, 16, 41, 0.12);
+		background: $color-white;
 		transition: all 0.2s linear;
 
 		&__burger {
@@ -257,13 +255,9 @@
 	.nav {
 		display: flex;
 		align-items: flex-start;
-		padding: 0 0 32px;
 		border-radius: 0 0 40px 40px;
+		padding: 0 0 32px;
 		box-shadow: 0 8px 8px -4px rgba(20, 16, 41, 0.06), 0 2px 4px -1px rgba(20, 16, 41, 0.06), 0 0 1px 0 rgba(20, 16, 41, 0.12);
-
-		@include mobile {
-			flex-flow: column;
-		}
 
 		&__list {
 			width: 100%;
@@ -306,18 +300,18 @@
 			}
 
 			&-check {
+				border-radius: 12px;
+				padding: 2px 18px 2px 2px;
 				width: 40px;
 				height: 24px;
-				padding: 2px 18px 2px 2px;
-				border-radius: 12px;
 				background-color: #ebeff5;
 				transition: all 0.5s $easing-smooth;
 
 				span {
 					display: block;
+					border-radius: 10px;
 					width: 20px;
 					height: 20px;
-					border-radius: 10px;
 					box-shadow: 0 8px 8px -4px rgba(20, 16, 41, 0.06), 0 2px 4px -1px rgba(20, 16, 41, 0.06), 0 0 1px 0 rgba(20, 16, 41, 0.12);
 					background-color: #fff;
 					transform: translateX(0);
@@ -328,11 +322,11 @@
 					background-color: #0fa;
 
 					span {
-						backdrop-filter: blur(40px);
-						box-shadow: 8px 8px 24px 0 rgba(9, 13, 20, 0.4), -4px -4px 8px 0 rgba(224, 224, 255, 0.04), 0 1px 1px 0 rgba(9, 13, 20, 0.4);
 						border: solid 1px rgba(245, 247, 250, 0.06);
+						box-shadow: 8px 8px 24px 0 rgba(9, 13, 20, 0.4), -4px -4px 8px 0 rgba(224, 224, 255, 0.04), 0 1px 1px 0 rgba(9, 13, 20, 0.4);
 						background-image: linear-gradient(135deg, rgba(45, 47, 51, 0.8), rgba(40, 42, 46, 0.96) 51%, #212429 99%);
 						transform: translateX(80%);
+						backdrop-filter: blur(40px);
 					}
 				}
 			}
@@ -341,9 +335,9 @@
 		&__switch {
 			position: relative;
 			display: flex;
+			flex-shrink: 0;
 			align-items: center;
 			justify-content: center;
-			flex-shrink: 0;
 			margin-right: vc(16);
 			border-radius: 12px;
 			width: vc(24);
@@ -367,6 +361,20 @@
 				color: $color-gray;
 			}
 		}
+
+		.is-white & {
+			//box-shadow: 8px 8px 24px 0 rgba(9, 13, 20, 0.4), -4px -4px 8px 0 rgba(224, 224, 255, 0.04), 0 1px 1px 0 rgba(9, 13, 20, 0.4);
+			border: solid 1px rgba(245, 247, 250, 0.06);
+			border-top: none;
+			background-image: linear-gradient(141deg, rgba(245, 247, 250, 0.12), rgba(245, 247, 250, 0.06) 52%, rgba(245, 247, 250, 0));
+			background-color: transparent;
+			backdrop-filter: blur(40px);
+		}
+
+		@include mobile {
+			flex-flow: column;
+		}
+
 		@include mobile {
 			position: fixed;
 			left: 0;
@@ -379,19 +387,9 @@
 			transform: translateY(-200%);
 			transition: all 0.2s linear;
 
-			&.is-menu-opened  {
+			&.is-menu-opened {
 				transform: translateY(0);
 			}
 		}
-
-		.is-white & {
-			backdrop-filter: blur(40px);
-			//box-shadow: 8px 8px 24px 0 rgba(9, 13, 20, 0.4), -4px -4px 8px 0 rgba(224, 224, 255, 0.04), 0 1px 1px 0 rgba(9, 13, 20, 0.4);
-			border: solid 1px rgba(245, 247, 250, 0.06);
-			border-top: none;
-			background-image: linear-gradient(141deg, rgba(245, 247, 250, 0.12), rgba(245, 247, 250, 0.06) 52%, rgba(245, 247, 250, 0));
-			background-color: transparent;
-		}
-
 	}
 }

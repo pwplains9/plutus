@@ -19,10 +19,9 @@
 
 	&__logo {
 		position: relative;
+		flex-shrink: 0;
 		width: vc(1123);
 		height: vc(689.83);
-		flex-shrink: 0;
-
 
 		img {
 			position: absolute;

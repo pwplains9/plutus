@@ -1,7 +1,7 @@
 .footer {
 	font-family: $font-Montserrat;
-	background-color: #ebeff5;
 	font-size: vc(14);
+	background-color: #ebeff5;
 
 	&__container {
 		display: flex;
@@ -52,14 +52,15 @@
 		align-items: center;
 
 		li {
-			margin-right: vc(48);
-
 			@include desktop {
 
 			}
 
+			margin-right: vc(48);
+
 			@include mobile {
 				margin-right: vc(32);
+
 				&:last-child {
 					margin-right: 0;
 				}
@@ -95,9 +96,9 @@
 
 		a {
 			@include hoverOpacity;
-			color: rgba(20, 16, 41, 0.8);
 
 			padding-left: vc(5);
+			color: rgba(20, 16, 41, 0.8);
 
 			.is-white & {
 				color: $color-white;

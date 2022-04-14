@@ -13,14 +13,12 @@
 
 		@include mobile {
 			top: 0;
-
 			width: 100%;
 			height: vc(470);
 		}
 	}
 
 	&::before {
-
 		@include desktop {
 			width: 100vw;
 			height: vc(2084);
@@ -88,7 +86,6 @@
 					height: vc(971);
 				}
 
-
 				@include desktop-xl {
 					width: vc(977);
 				}
@@ -104,17 +101,16 @@
 			opacity: 0;
 
 			@include desktop {
+				border-radius: 40% 0 0;
 				width: 56.5vw;
 				height: 70vw;
+				background: url("../images/03_images/@2x/main_dark@2x.jpg") center right no-repeat;
+				background-size: contain;
 
 				@include desktop-xl {
 					width: vc(917);
 					height: vc(1146);
 				}
-
-				background: url("../images/03_images/@2x/main_dark@2x.jpg") center right no-repeat;
-				background-size: contain;
-				border-radius: 40% 0 0 0;
 			}
 
 			@include mobile {
@@ -169,8 +165,8 @@
 		}
 
 		&--2 {
-			color: $color-theme;
 			box-shadow: 0 8px 8px -4px rgba(69, 121, 245, 0.06), 0 2px 4px -1px rgba(27, 10, 82, 0.06), 0 0 1px 0 rgba(69, 121, 245, 0.12);
+			color: $color-theme;
 			background: $color-white;
 		}
 	}
@@ -189,11 +185,11 @@
 	&__item {
 		flex-shrink: 0;
 		overflow: hidden;
+		margin: 0 vc(198) vc(377) 0;
+		border-radius: 40px;
+		padding: vc(8) vc(8) vc(24);
 		width: vc(312);
 		height: vc(408);
-		margin: 0 vc(198) vc(377) 0;
-		padding: vc(8) vc(8) vc(24);
-		border-radius: 40px;
 		box-shadow: 8px 8px 24px 0 rgba(9, 13, 20, 0.06), -4px -4px 8px 0 rgba(255, 255, 255, 0.4), 0 1px 1px 0 rgba(9, 13, 20, 0.06);
 		background-image: linear-gradient(143deg, #fff, #fafbfc 52%, #f5f7fa);
 
@@ -219,10 +215,10 @@
 		}
 
 		.is-white & {
-			backdrop-filter: blur(40px);
-			box-shadow: 8px 8px 24px 0 rgba(9, 13, 20, 0.4), -4px -4px 8px 0 rgba(224, 224, 255, 0.04), 0 1px 1px 0 rgba(9, 13, 20, 0.4);
 			border: solid 1px rgba(245, 247, 250, 0.06);
+			box-shadow: 8px 8px 24px 0 rgba(9, 13, 20, 0.4), -4px -4px 8px 0 rgba(224, 224, 255, 0.04), 0 1px 1px 0 rgba(9, 13, 20, 0.4);
 			background-image: linear-gradient(143deg, rgba(245, 247, 250, 0.12), rgba(245, 247, 250, 0.06) 52%, rgba(245, 247, 250, 0));
+			backdrop-filter: blur(40px);
 		}
 
 		@include desktop {
@@ -250,9 +246,9 @@
 
 	&__image {
 		position: relative;
+		margin: 0 0 vc(20);
 		width: vc(296);
 		height: vc(296);
-		margin: 0 0 vc(20);
 
 		img {
 			position: absolute;
@@ -284,7 +280,6 @@
 		align-items: flex-start;
 		padding: 0 vc(13);
 		font-family: $font-Montserrat;
-
 	}
 
 	&__info {
@@ -293,16 +288,16 @@
 
 	&__subtitle {
 		margin: 0 0 vc(4);
+		font-weight: 600;
 		font-size: vc(16);
 		line-height: vc(24);
-		font-weight: 600;
 	}
 
 	&__subtext {
 		width: vc(194);
+		font-weight: 500;
 		font-size: vc(13);
 		line-height: vc(16);
-		font-weight: 500;
 	}
 
 	@include mobile {

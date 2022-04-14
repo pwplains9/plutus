@@ -12,11 +12,6 @@
 		--width-current: 1680px;
 	}
 
-	//@include laptop-h {
-	//	--width-base: 790;
-	//	--width-current: 100vh;
-	//}
-
 	@include mobile {
 		--width-base: 360;
 		--width-current: 100vmin;
@@ -35,8 +30,8 @@ html {
 	min-height: 100vh;
 	box-sizing: border-box;
 	font-family: $font-Montserrat;
-	scroll-behavior: smooth;
 	color: $color-white;
+	scroll-behavior: smooth;
 
 	&.has-cursor,
 	&.has-cursor * {
@@ -55,8 +50,8 @@ body {
 	text-decoration-skip: objects;
 	text-rendering: optimizeLegibility;
 	text-size-adjust: 100%;
-	-webkit-tap-highlight-color: transparent;
 	color: rgba(20, 16, 41, 0.8);
+	-webkit-tap-highlight-color: transparent;
 	background: $color-white;
 	transition: all 0.5s $easing-smooth;
 
@@ -68,7 +63,6 @@ body {
 main {
 	flex: 1;
 	overflow: hidden;
-	//transition: opacity 0.5s $easing-smooth;
 	opacity: 1;
 
 	@include mobile {

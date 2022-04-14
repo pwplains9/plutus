@@ -10,9 +10,6 @@ import scrollToAnchor from './modules/scrollToAnchor';
 
 import theme from "./components/theme";
 
-import {aosInit} from "./components/aos";
-import slider from "./components/slider";
-
 ieFix();
 vhFix();
 actualYear();
