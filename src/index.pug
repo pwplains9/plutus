@@ -1,0 +1,26 @@
+extends pug/base
+
+prepend vars
+	- title = 'Plutus'
+	- description = 'Description'
+	- image = '/images/share/' // url картинки для шера
+
+append vars
+	- link.appleTouchIcon180x180 = '/favicon/apple-touch-icon.png'
+	- link.icon32x32 = '/favicon/favicon-32x32.png'
+	- link.icon16x16 = '/favicon/favicon-16x16.png'
+	- link.manifest = '/favicon/site.webmanifest'
+	- link.maskIcon.href = '/favicon/safari-pinned-tab.svg'
+	- link.maskIcon.color = '#5bbad5'
+	- meta.msapplicationTileColor = '#ffffff'
+	- meta.msapplicationTileImage = '/favicon/mstile-144x144.png'
+	- meta.themeColor = '#ffffff'
+
+	-html.classList = 'is-white'
+block content
+	.content.is-hidden
+		include pug/components/header
+
+		include pug/pages/home
+
+		include pug/components/footer

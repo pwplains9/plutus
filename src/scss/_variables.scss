@@ -1,0 +1,76 @@
+// stylelint-disable scss/dollar-variable-empty-line-before
+
+// COLORS
+$color-black: #000;
+$color-white: #fff;
+$color-gray: #141029;
+$color-text: rgba(20, 16, 41, 0.8);
+$color-theme: #4579f5;
+$color-surface: #7ab6cc;
+$color-surface2: #7a93cc;
+$color-surface3: #907acc;
+$color-surface4: #ebeff5;
+$color-surface5: #e0a887;
+$color-surface6: #6eb7b8;
+$color-surface7: #cc7ab1;
+$color-surface8: #87e0c2;
+$color-surface9: #e0c387;
+$color-surface10: #383a3d;
+$color-section: #fafbfc;
+$color-surface11: #629fa3;
+$color-surface12: #ab6eb8;
+$color-surface13: #936eb8;
+$color-surface14: #cc7a88;
+$color-footer: #090d14;
+$color-bg: #202036;
+$color-logo: #212429;
+$color-block: #27273e;
+$color-marquee: #3d3e54;
+$color-footer-m: #090d14;
+$color-intro-m: #00061a;
+
+// ** //
+
+$color-theme: #5fd1dc;
+$color-royal: #5b86ee;
+$color-indigo: #1d20a3;
+$color-ping: #cf86fe;
+$gradient-blue: linear-gradient(96deg, #5fd1dc, #5b86ee 52%, #1d20a3);
+
+$color-wave: #0fa;
+$color-wave2: #00ffaa;
+$color-bluebird: #0bf;
+$color-royal2: #4579f5;
+$color-teal: #3d5b66;
+$color-text: #e0e0ff;
+$color-bg-black: #212429;
+$gradient-black: linear-gradient(96deg, #0fa, #0bf 53%, #4579f5);
+$color-error: #ff5e00;
+
+
+$color-bluebird-white: #0bf;
+$color-twitter: #1da1f2;
+$color-bluebird-light: #99d8ff;
+$color-text-light: #141029;
+
+// FONTS
+// stylelint-disable-next-line
+$font-primary: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen, ubuntu, cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+$font-Montserrat: 'Montserrat';
+$font-Poppins: 'Poppins';
+$font-Gilroy: 'Gilroy';
+
+// EASING TRANSITIONS
+$duration-normal: 0.4s;
+$easing-back-out: cubic-bezier(0.25, 0.74, 0.22, 1.1); // http://cubic-bezier.com/#.25,.74,.22,1.1
+$easing-back-in: cubic-bezier(0.47, -0.1, 0.5, -0.06); // http://cubic-bezier.com/#.47,-0.1,.5,-.06
+$easing-out: ease-out;
+$easing-in: ease-in;
+$easing-smooth: cubic-bezier(0.45, 0.05, 0.55, 0.95);
+
+// Settings
+$desktop: 1025;
+$desktop-xl: 1680;
+$laptop: 1366;
+$mobile: 360;
+$desktop-vh: 750;

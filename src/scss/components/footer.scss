@@ -1,0 +1,119 @@
+.footer {
+	font-family: $font-Montserrat;
+	background-color: #ebeff5;
+	font-size: vc(14);
+
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		margin: 0 auto;
+		padding: vc(75) 0 vc(70);
+		width: vc(1319);
+
+		@include mobile {
+			padding: vc(32) vc(34);
+			width: 100%;
+		}
+
+		@include mobile {
+			flex-flow: column;
+			align-items: flex-start;
+		}
+	}
+
+	&__logo {
+		@include hoverOpacity;
+
+		display: flex;
+		align-items: center;
+		margin-right: vc(22);
+		height: vc(40);
+		font-family: $font-Montserrat;
+		font-weight: 700;
+		font-size: vc(24);
+		line-height: vc(32);
+		letter-spacing: -1px;
+		color: $color-logo;
+
+		img {
+			margin-right: vc(8);
+			width: vc(39);
+			height: vc(39);
+		}
+
+		@include mobile {
+			width: vc(154);
+			height: vc(32);
+		}
+	}
+
+	&__nav {
+		display: flex;
+		align-items: center;
+
+		li {
+			margin-right: vc(48);
+
+			@include desktop {
+
+			}
+
+			@include mobile {
+				margin-right: vc(32);
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+		}
+
+		@include mobile {
+			margin-top: vc(41);
+			margin-bottom: vc(35);
+		}
+	}
+
+	&__link {
+		@include hoverColor;
+
+		font-family: $font-Montserrat;
+		font-weight: 600;
+		font-size: vc(16);
+		line-height: vc(16);
+	}
+
+	&__copy {
+		display: flex;
+		flex-flow: column;
+		justify-content: center;
+		text-align: right;
+
+		&-text {
+			.is-white & {
+				opacity: 0.6;
+			}
+		}
+
+		a {
+			@include hoverOpacity;
+			color: rgba(20, 16, 41, 0.8);
+
+			padding-left: vc(5);
+
+			.is-white & {
+				color: $color-white;
+			}
+		}
+
+		@include mobile {
+			width: 100%;
+		}
+	}
+
+	&__copyright {
+		margin-top: vc(5);
+
+		.is-white & {
+			opacity: 0.6;
+		}
+	}
+}

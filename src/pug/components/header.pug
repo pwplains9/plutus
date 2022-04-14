@@ -1,0 +1,51 @@
+header.header(data-aos="fade-down" data-aos-delay="100")
+	.header__container
+		.header__left
+			a.header__logo(href="/")
+				img(src="../images/00_logo/plutus_mark.png" srcset="../images/00_logo/plutus_mark@2x.png" alt="logo")
+				| plutus.art
+			ul.header__nav.for-desktop
+				li
+					a.header__link(href="#" target="_blank")
+						| Explore
+
+				li
+					a.header__link.js-to-anchor(href="")
+						| Collections
+				li
+					a.header__link.js-to-anchor(href="")
+						| Rewards
+		.header__right.for-desktop
+			.header__switch.js-switch
+				+svg('moon')
+				+svg('moon_f')
+			a.button(href="" target="_blank")
+				.button__inner
+					| Connect wallet
+		.header__burger.js-burger.for-mobile
+			+svg('menu')
+			+svg('close')
+.nav.for-mobile
+	ul.nav__list.for-mobile
+		li
+			a.nav__link(href="#" target="_blank")
+				| Explore
+
+		li
+			a.nav__link.is-current(href="")
+				| Collections
+		li
+			a.nav__link(href="")
+				| Rewards
+	.nav__themes
+		.nav__themes-left
+			.nav__switch.js-switch
+				+svg('moon')
+				+svg('moon_f')
+			.nav__themes-text.for-mobile
+				| Dark mode
+		.nav__themes-check.js-switch.for-mobile
+			span
+	a.button.button--full(href="" target="_blank")
+		.button__inner
+			| Connect wallet
