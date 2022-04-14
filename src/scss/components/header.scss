@@ -385,7 +385,7 @@
 			padding: vc(8) vc(20) vc(32);
 			background: $color-white;
 			transform: translateY(-200%);
-			transition: all 0.2s linear;
+			transition: all 0.5s $easing-smooth;
 
 			&.is-menu-opened {
 				transform: translateY(0);
