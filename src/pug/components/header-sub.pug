@@ -1,5 +1,5 @@
 header.header.header--main(data-aos="fade-down" data-aos-delay="100")
-	.header__container
+	.header__container.header__container--inner
 		.header__left
 			a.header__logo(href="/")
 				img(src="../images/00_logo/plutus_mark.png" srcset="../images/00_logo/plutus_mark@2x.png" alt="logo")
@@ -44,8 +44,7 @@ header.header.header--main(data-aos="fade-down" data-aos-delay="100")
 				+svg('moon_f')
 			.nav__themes-text.for-mobile
 				| Dark mode
-		label.nav__themes-check.js-switch.for-mobile
-			input(type="checkbox")
+		.nav__themes-check.js-switch.for-mobile
 			span
 	a.button.button--full(href="" target="_blank")
 		.button__inner

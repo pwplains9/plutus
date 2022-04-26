@@ -62,7 +62,7 @@ body {
 
 main {
 	flex: 1;
-	overflow: hidden;
+	//overflow: hidden;
 	opacity: 1;
 
 	@include mobile {
@@ -225,4 +225,70 @@ body[data-aos-duration="400"] [data-aos] {
 
 [data-aos="fade-right"] {
 	transform: translate3d(-30px, 0, 0);
+}
+
+.plug {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+
+	&__logo {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		z-index: 1;
+		margin-top: vc(12);
+		margin-left: vc(-477);
+		width: vc(536);
+		height: vc(580);
+		background: url("../images/plug/01_image/@2x/logo@2x.png") center center no-repeat;
+		background-size: contain;
+		transform: translate(-50%, -50%);
+	}
+
+	&__elem {
+		position: absolute;
+		width: 100vw;
+		height: 100vh;
+		background: url("../images/plug/02_background/bg_light@2x.jpg") center center no-repeat;
+		background-size: cover;
+
+		.is-white & {
+			background: url("../images/plug/02_background/bg_dark@2x.jpg") center center no-repeat;
+			background-size: cover;
+		}
+	}
+
+	&__title {
+		position: relative;
+		z-index: 1;
+		font-family: $font-Poppins;
+		font-weight: 900;
+		font-size: vc(144);
+		letter-spacing: -8px;
+		color: #2d2f33;
+
+		span {
+			display: block;
+
+			@include desktop {
+				position: relative;
+				top: vc(20);
+			}
+		}
+
+		.is-white & {
+			color: $color-white;
+		}
+
+		@include desktop {
+			width: vc(872);
+		}
+
+		@include mobile {
+			font-size: vc(45);
+			letter-spacing: -4px;
+		}
+	}
 }

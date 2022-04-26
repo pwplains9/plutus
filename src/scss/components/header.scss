@@ -15,6 +15,27 @@
 		@include desktop {
 			padding: vc(21) 0;
 			width: vc(1319);
+
+			&--plug {
+				.header__switch {
+					margin-right: 0;
+				}
+			}
+
+			&--inner {
+				padding: vc(22) vc(22) vc(22) vc(34);
+				width: 100%;
+			}
+		}
+
+		@include desktop-xl {
+			&--plug {
+				width: vc(1614);
+
+				.header__switch {
+					margin-right: 0;
+				}
+			}
 		}
 	}
 
@@ -83,15 +104,17 @@
 		align-items: center;
 
 		@include mobile {
-			position: absolute;
-			left: 0;
-			right: 0;
-			top: vc(80);
-			flex-flow: column;
-			padding: vc(32) 0;
-			background: $color-white;
-			transform: translateX(-100%);
-			transition: all 0.2s linear;
+			.header--main & {
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: vc(80);
+				flex-flow: column;
+				padding: vc(32) 0;
+				background: $color-white;
+				transform: translateX(-100%);
+				transition: all 0.2s linear;
+			}
 
 			.is-menu-opened & {
 				transform: translateX(0);
@@ -105,7 +128,6 @@
 		flex-shrink: 0;
 		align-items: center;
 		justify-content: center;
-		margin-right: vc(16);
 		border: solid 2px rgba(20, 16, 41, 0.8);
 		border-radius: 12px;
 		width: vc(48);
@@ -123,6 +145,10 @@
 				opacity: 0;
 				transition: all 0.5s linear;
 			}
+		}
+
+		.header--main & {
+			margin-right: vc(16);
 		}
 
 		@include desktop {
@@ -145,9 +171,11 @@
 		}
 
 		@include mobile {
-			margin-bottom: vc(20);
-			border-color: $color-gray;
-			color: $color-gray;
+			.header--main & {
+				margin-bottom: vc(20);
+				border-color: $color-gray;
+				color: $color-gray;
+			}
 		}
 	}
 
