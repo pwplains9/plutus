@@ -16,7 +16,11 @@
 
 	&__filters {
 		display: flex;
-		border-bottom: solid 1px rgba(224, 224, 255, 0.12);
+		border-bottom: solid 1px rgba(20, 16, 41, 0.12);
+
+		.is-white & {
+			border-bottom: solid 1px rgba(224, 224, 255, 0.12);
+		}
 	}
 
 	&__filter {
@@ -53,17 +57,21 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		width: 200px;
-		padding: 12px;
 		border-radius: 12px;
-		background-color: #2d2f33;
-		font-size: 16px;
+		padding: 12px;
+		width: 200px;
 		font-weight: 500;
+		font-size: 16px;
 		line-height: 24px;
+		background-color: #f5f7fa;
 
 		svg {
 			width: 24px;
 			height: 24px;
+		}
+
+		.is-white & {
+			background-color: #2d2f33;
 		}
 	}
 
@@ -74,7 +82,27 @@
 		margin-top: 15px;
 	}
 }
+.select {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-radius: 12px;
+	padding: 12px;
+	width: 200px;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 24px;
+	background-color: #f5f7fa;
 
+	svg {
+		width: 24px;
+		height: 24px;
+	}
+
+	.is-white & {
+		background-color: #2d2f33;
+	}
+}
 .filter {
 	$self: &;
 
@@ -84,7 +112,7 @@
 	display: block;
 	overflow-x: hidden;
 	overflow-y: scroll;
-	border-right: solid 1px rgba(224, 224, 255, 0.12);
+	border-right: solid 1px rgba(20, 16, 41, 0.12);
 	padding: 24px;
 	width: 268px;
 	height: 100vh;
@@ -101,12 +129,21 @@
 		font-weight: 600;
 		font-size: 16px;
 		line-height: 24px;
-		background-color: #2d2f33;
+		background-color: #f5f7fa;
 
 		svg {
 			margin: 0 12px 0 0;
 			width: 24px;
 			height: 24px;
+			color: #1da1f2;
+
+			.is-white & {
+				color: #0fa;
+			}
+		}
+
+		.is-white & {
+			background-color: #2d2f33;
 		}
 	}
 
@@ -114,12 +151,12 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		border: solid 1px rgba(224, 224, 255, 0.12);
+		margin: 16px 0;
+		border: solid 1px rgba(20, 16, 41, 0.12);
 		border-radius: 12px;
+		padding: 12px;
 		width: 220px;
 		height: 48px;
-		margin: 16px 0;
-		padding: 12px;
 		font-weight: 600;
 		font-size: 16px;
 		line-height: 24px;
@@ -129,7 +166,8 @@
 			padding: 2px;
 			width: 40px;
 			height: 24px;
-			background-color: rgba(9, 13, 20, 0.24);
+			box-shadow: inset 8px 8px 40px 0 rgba(9, 13, 20, 0.06), inset -4px -4px 8px 0 rgba(255, 255, 255, 0.4), inset 0 1px 1px 0 rgba(9, 13, 20, 0.06);
+			background-image: linear-gradient(to bottom, #ebeff5, #f5f7fa 53%, #fff);
 
 			input {
 				display: none;
@@ -141,15 +179,30 @@
 
 			span {
 				display: block;
+				border: solid 1px rgba(33, 36, 41, 0.06);
 				border-radius: 50%;
 				width: 20px;
 				height: 20px;
-				backdrop-filter: blur(40px);
-				box-shadow: -4px -4px 8px 0 rgba(224, 224, 255, 0.04), 0 1px 1px 0 rgba(9, 13, 20, 0.4);
-				border: solid 1px rgba(245, 247, 250, 0.06);
-				background-image: linear-gradient(to bottom, rgba(245, 247, 250, 0.24), rgba(245, 247, 250, 0.12) 52%, rgba(245, 247, 250, 0));
+				box-shadow: 8px 8px 24px 0 rgba(9, 13, 20, 0.06), -4px -4px 8px 0 rgba(255, 255, 255, 0.4), 0 1px 1px 0 rgba(9, 13, 20, 0.06);
+				background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(250, 251, 252, 0.6) 52%, rgba(245, 247, 250, 0.4));
 				transition: all 0.5s $easing-smooth;
+				backdrop-filter: blur(40px);
+
+				.is-white & {
+					border: solid 1px rgba(245, 247, 250, 0.06);
+					box-shadow: -4px -4px 8px 0 rgba(224, 224, 255, 0.04), 0 1px 1px 0 rgba(9, 13, 20, 0.4);
+					background-image: linear-gradient(to bottom, rgba(245, 247, 250, 0.24), rgba(245, 247, 250, 0.12) 52%, rgba(245, 247, 250, 0));
+				}
 			}
+
+			.is-white & {
+				box-shadow: none;
+				background: rgba(9, 13, 20, 0.24);
+			}
+		}
+
+		.is-white & {
+			border: solid 1px rgba(224, 224, 255, 0.12);
 		}
 	}
 
@@ -160,22 +213,25 @@
 
 	&__input {
 		flex-shrink: 0;
+		margin: 0 4px 0 0;
+		border: solid 1px rgba(20, 16, 41, 0.12);
 		width: 90px;
 		height: 48px;
-		margin: 0 4px 0 0;
-		border: solid 1px rgba(224, 224, 255, 0.12);
 
 		input {
+			outline: none;
 			border: none;
-			padding: 13px 16px 11px 16px;
+			padding: 13px 16px 11px;
 			width: 100%;
 			height: 100%;
-			background: transparent;
-			outline: none;
 			font-weight: 600;
 			font-size: 16px;
 			line-height: 24px;
-			color: $color-white;
+			background: transparent;
+
+			.is-white & {
+				color: $color-white;
+			}
 		}
 
 		&--1 {
@@ -186,6 +242,10 @@
 			margin-right: 12px;
 			border-radius: 0 10px 10px 0;
 		}
+
+		.is-white & {
+			border: solid 1px rgba(224, 224, 255, 0.12);
+		}
 	}
 
 	&__icon {
@@ -195,12 +255,16 @@
 	}
 
 	&__collections {
+		margin: 0 -24px;
+		padding: 0 16px;
+		background-color: #fafbfc;
+
 		&-button {
 			display: flex;
 			justify-content: space-between;
 			margin-top: 25px;
 			margin-bottom: 20px;
-			border-bottom: solid 1px rgba(224, 224, 255, 0.12);
+			border-bottom: solid 1px rgba(20, 16, 41, 0.12);
 			padding: 24px 0;
 			font-weight: 600;
 			font-size: 16px;
@@ -220,6 +284,10 @@
 			.arrow {
 				margin-right: 0;
 			}
+
+			.is-white & {
+				border-bottom: solid 1px rgba(224, 224, 255, 0.12);
+			}
 		}
 
 		&-list {
@@ -234,9 +302,22 @@
 			font-weight: 600;
 			font-size: 14px;
 			line-height: 24px;
-			background-color: #00b8b9;
 			text-align: center;
+			color: $color-white;
+			background-color: #1da1f2;
+
+			.is-white & {
+				background-color: #00b8b9;
+			}
 		}
+
+		.is-white & {
+			background-color: #282a2e;
+		}
+	}
+
+	.is-white & {
+		border-right: solid 1px rgba(224, 224, 255, 0.12);
 	}
 }
 
@@ -244,10 +325,15 @@
 	$self: &;
 
 	display: flex;
+	margin-bottom: 8px;
 	margin-left: -4px;
-	margin-bottom: 16px;
+	border-radius: 12px;
+	padding: 4px;
+	background-color: #fff;
 
 	&__image {
+		flex-shrink: 0;
+
 		img {
 			margin: 0 12px 0 0;
 			border-radius: 12px;
@@ -281,28 +367,35 @@
 
 		span {
 			padding-right: 4px;
-			color: rgba(224, 224, 255, 0.6);
+			color: rgba(20, 16, 41, 0.6);
+
+			.is-white & {
+				color: rgba(224, 224, 255, 0.6);
+			}
 		}
 	}
 
 	&__floor {
 		margin-left: 20px;
 	}
+
+	.is-white & {
+		background-color: #2d2f33;
+	}
 }
 
 .item-collections {
 	$self: &;
 
+	margin-bottom: 16px;
+	border-radius: 40px;
+	padding: 8px 8px 22px;
 	width: 312px;
 	height: 444px;
-	margin-bottom: 16px;
-	padding: 8px 8px 22px;
-	border-radius: 40px;
-	-webkit-backdrop-filter: blur(40px);
-	backdrop-filter: blur(40px);
-	box-shadow: 8px 8px 24px 0 rgba(9, 13, 20, 0.4), -4px -4px 8px 0 rgba(224, 224, 255, 0.04), 0 1px 1px 0 rgba(9, 13, 20, 0.4);
-	border: solid 1px rgba(245, 247, 250, 0.06);
+	box-shadow: 0 8px 8px -4px rgba(20, 16, 41, 0.06), 0 2px 4px -1px rgba(20, 16, 41, 0.06), 0 0 1px 0 rgba(20, 16, 41, 0.12);
 	background-image: linear-gradient(145deg, rgba(245, 247, 250, 0.12), rgba(245, 247, 250, 0.06) 52%, rgba(245, 247, 250, 0));
+	backdrop-filter: blur(40px);
+	backdrop-filter: blur(40px);
 
 	&__top {
 
@@ -322,34 +415,38 @@
 		font-weight: 600;
 		font-size: 14px;
 		line-height: 20px;
-		color: rgba(224, 224, 255, 0.6);
+		color: rgba(20, 16, 41, 0.6);
 
 		svg {
 			width: 20px;
 			height: 20px;
 		}
+
+		.is-white & {
+			color: rgba(224, 224, 255, 0.6);
+		}
 	}
 
 	&__title {
 		padding: 0 15px;
-		font-size: 16px;
 		font-weight: 600;
+		font-size: 16px;
 		line-height: 24px;
 	}
 
 	&__bottom {
 		display: flex;
 		justify-content: space-between;
-		padding: 16px 15px 0;
 		margin: 15px 0 0;
 		border-top: solid 1px rgba(224, 224, 255, 0.12);
+		padding: 16px 15px 0;
 	}
 
 	&__price {
 		font-family: $font-Gilroy;
+		font-weight: 600;
 		font-size: 14px;
 		line-height: 24px;
-		font-weight: 600;
 		cursor: pointer;
 
 		&:hover {
@@ -373,8 +470,13 @@
 	}
 
 	&__more {
-		cursor: pointer;
 		width: 24px;
 		height: 24px;
+		cursor: pointer;
+	}
+
+	.is-white & {
+		border: solid 1px rgba(245, 247, 250, 0.06);
+		box-shadow: 8px 8px 24px 0 rgba(9, 13, 20, 0.4), -4px -4px 8px 0 rgba(224, 224, 255, 0.04), 0 1px 1px 0 rgba(9, 13, 20, 0.4);
 	}
 }
