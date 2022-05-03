@@ -15,7 +15,7 @@ const init = () => {
 
 		gsap.timeline().to(vars.$body.find('main'), 0.5, {
 			autoAlpha: 0,
-			immediateRender: false
+			immediateRender: false,
 		}).call(() => {
 			vars.$document.find('.content').removeClass('is-hidden');
 		}).from(vars.$body.find('main'), 0.5, {

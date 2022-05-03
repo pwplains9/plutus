@@ -1,0 +1,223 @@
+.rewards {
+	width: 100vw;
+	overflow: hidden;
+	padding-top: 150px;
+	padding-bottom: 70px;
+	//background: url("../images/04_backgrounds/bg_shape@2x.png") center center no-repeat;
+	//background-size: cover;
+
+	&::before {
+		content: "";
+		position: absolute;
+		left: 50%;
+		top: 0;
+		z-index: -1;
+		display: block;
+		width: 1920px;
+		height: 663.8px;
+		background: url("../images/04_backgrounds/bg_shape@2x.png") center center no-repeat;
+		background-size: contain;
+		transform: translateX(-50%);
+	}
+
+	&__stitle {
+		margin-bottom: 20px;
+	}
+
+	&__filters {
+		display: flex;
+		margin-top: 48px;
+		border-bottom: solid 1px rgba(20, 16, 41, 0.12);
+
+		.is-white & {
+			border-bottom: solid 1px rgba(224, 224, 255, 0.12);
+		}
+	}
+
+	&__filter {
+		border-bottom: 2px solid transparent;
+		padding: 10px 16px;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 24px;
+
+		&.is-current {
+			border-bottom-color: #0fa;
+			font-weight: 600;
+		}
+	}
+
+	&__container {
+		position: relative;
+	}
+
+	&__left {
+		display: flex;
+		align-items: center;
+		height: 80px;
+	}
+
+	&__center {
+		padding: 29px 0 0;
+	}
+
+	&__buttons {
+		display: flex;
+		margin-top: 34px;
+	}
+
+	&__items {
+
+	}
+
+	&__item {
+		display: flex;
+		//align-items: center;
+		justify-content: space-between;
+		margin-top: 24px;
+		border-radius: 40px;
+		padding: 32px;
+		box-shadow: 0 8px 8px -4px rgba(20, 16, 41, 0.06), 0 2px 4px -1px rgba(20, 16, 41, 0.06), 0 0 1px 0 rgba(20, 16, 41, 0.12);
+		background-image: linear-gradient(123deg, rgba(245, 247, 250, 0.12), rgba(245, 247, 250, 0.06) 52%, rgba(245, 247, 250, 0) 100%);
+		background-color: $color-white;
+		backdrop-filter: blur(40px);
+
+		.is-white & {
+			border: solid 1px rgba(245, 247, 250, 0.06);
+			box-shadow: 8px 8px 24px 0 rgba(9, 13, 20, 0.4), -4px -4px 8px 0 rgba(224, 224, 255, 0.04), 0 1px 1px 0 rgba(9, 13, 20, 0.4);
+			background-image: linear-gradient(96deg, rgba(245, 247, 250, 0.12), rgba(245, 247, 250, 0.06) 52%, rgba(245, 247, 250, 0) 100%);
+			background-color: transparent;
+		}
+	}
+
+	&__image {
+		display: flex;
+		flex-shrink: 0;
+		align-items: center;
+		justify-content: center;
+		margin-right: 32px;
+		//margin-top: 5px;
+		border-radius: 12px;
+		width: 80px;
+		height: 80px;
+
+		&--1 {
+			border: solid 2px #212429;
+			background-image: linear-gradient(135deg, #ef0, #0fa 52%, #00b8b9);
+
+			svg {
+				width: 48px;
+				height: 48px;
+			}
+		}
+
+		&--2 {
+			border: solid 2px #fff;
+			background-image: linear-gradient(to bottom, #090d14, #282a2e 53%, #2d2f33);
+
+			img {
+				width: 36px;
+				height: 39px;
+			}
+		}
+	}
+
+	&__content {
+
+	}
+
+	&__title {
+		margin-bottom: 12px;
+		font-weight: 600;
+		font-size: 18px;
+		line-height: 24px;
+		letter-spacing: -0.4px;
+	}
+
+	&__links {
+		margin-bottom: 8px;
+	}
+
+	&__link {
+		margin-right: 12px;
+		border-bottom: 1px solid #1da1f2;
+		font-weight: 500;
+		font-size: 13px;
+		line-height: 16px;
+
+		color: #1da1f2;
+
+		.is-white & {
+			color: #0fa;
+			border-bottom: 1px solid #0fa;
+		}
+	}
+
+	&__text {
+		//margin-bottom: -10px;
+		width: 327px;
+		font-weight: 500;
+		font-size: 13px;
+		line-height: 16px;
+	}
+
+	&__price {
+		display: flex;
+		align-items: center;
+		font-family: $font-Gilroy;
+		font-weight: 600;
+		font-size: 24px;
+		line-height: 24px;
+
+		svg {
+			margin-right: 8px;
+			width: 24px;
+			height: 24px;
+		}
+	}
+
+	&__stakes {
+		width: 504px;
+	}
+
+	&__select {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 8px;
+		border-radius: 12px;
+		padding: 28px;
+		width: 504px;
+		height: 80px;
+		background-color: rgba(20, 16, 41, 0.06);
+
+		svg {
+			width: 24px;
+			height: 24px;
+		}
+
+		.is-white & {
+			background-color: rgba(224, 224, 255, 0.06);
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.rewards-gets {
+
+	padding-top: 76px;
+	padding-bottom: 1px;
+	background-image: radial-gradient(circle at 50% 0, #fff, #fafbfc 21%, #ebeff5 44%);
+
+	&__buttons {
+		display: flex;
+		justify-content: center;
+	}
+
+	.is-white & {
+		background-image: radial-gradient(circle at 50% 0, #2d2f33, #282a2e 21%, #090d14 44%);
+	}
+}

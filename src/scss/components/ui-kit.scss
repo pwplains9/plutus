@@ -29,7 +29,6 @@
 				color: $color-white;
 			}
 		}
-
 	}
 
 	&--center {
@@ -91,6 +90,24 @@
 		color: $color-white;
 	}
 
+	&--center {
+		text-align: center;
+	}
+
+	&--rewards {
+		margin-top: 20px;
+		margin-bottom: 32px;
+	}
+
+	&--gray {
+		margin: 0 auto;
+		width: 968px;
+
+		.is-white & {
+			color: rgba(224, 224, 255, 0.6);
+		}
+	}
+
 	@include desktop {
 		&--lg {
 			font-size: vc(24);
@@ -111,11 +128,19 @@
 		}
 
 		&--xs {
-
+			font-size: 14px;
+			line-height: 20px;
 		}
 
 		&--earn {
 			width: vc(348);
+		}
+
+		&--xxs {
+			margin-top: 74px;
+			margin-bottom: 73px;
+			font-size: 13px;
+			line-height: 16px;
 		}
 	}
 
@@ -232,8 +257,8 @@
 				align-items: center;
 				justify-content: space-between;
 				margin-top: 148px;
-				padding-bottom: 48px;
 				border-bottom: solid 1px rgba(20, 16, 41, 0.24);
+				padding-bottom: 48px;
 			}
 		}
 
@@ -355,6 +380,22 @@
 		}
 	}
 
+	&--rewards {
+		display: block;
+		border-radius: 14px;
+		width: 142px;
+
+		#{$self}__inner {
+			border-radius: 14px;
+			padding: vc(12) 0;
+			width: 138px;
+			height: 48px;
+			font-size: vc(16);
+			line-height: vc(24);
+			text-align: center;
+		}
+	}
+
 	&--md {
 		display: inline-block;
 		border-radius: 26px;
@@ -440,6 +481,36 @@
 
 		.is-white & {
 			background-color: #3d5b66;
+		}
+	}
+
+	&--icon {
+		display: block;
+		margin-left: 24px;
+		width: 187px;
+
+		#{$self}__inner {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 14px;
+			padding: vc(12) 0;
+			width: 183px;
+			height: 48px;
+			font-size: vc(16);
+			line-height: vc(24);
+			text-align: center;
+
+			svg {
+				margin-right: 12px;
+				width: 24px;
+				height: 24px;
+				color: #1da1f2;
+
+				.is-white & {
+					color: #0fa;
+				}
+			}
 		}
 	}
 
@@ -689,32 +760,32 @@
 		position: relative;
 		display: flex;
 		align-items: center;
+		border-radius: 12px;
+		padding: 2px;
 		width: 252px;
 		height: 48px;
-		padding: 2px;
-		border-radius: 12px;
 		box-shadow: inset 8px 8px 40px 0 rgba(9, 13, 20, 0.06), inset -4px -4px 8px 0 rgba(255, 255, 255, 0.4), inset 0 1px 1px 0 rgba(9, 13, 20, 0.06);
 		background-image: linear-gradient(to bottom, #ebeff5, #f5f7fa 53%, #fff);
 
 		&::before {
 			content: "";
 			position: absolute;
+			border: solid 1px rgba(33, 36, 41, 0.06);
+			border-radius: 10px;
 			width: 124px;
 			height: 44px;
-			border-radius: 10px;
-			-webkit-backdrop-filter: blur(40px);
-			backdrop-filter: blur(40px);
 			box-shadow: 8px 8px 24px 0 rgba(9, 13, 20, 0.06), -4px -4px 8px 0 rgba(255, 255, 255, 0.4), 0 1px 1px 0 rgba(9, 13, 20, 0.06);
-			border: solid 1px rgba(33, 36, 41, 0.06);
 			background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(250, 251, 252, 0.6) 52%, rgba(245, 247, 250, 0.4));
 			transform: translateX(0);
 			transition: all 0.5s linear;
+			backdrop-filter: blur(40px);
+			backdrop-filter: blur(40px);
 
 			.is-white & {
-				backdrop-filter: blur(40px);
-				box-shadow: 8px 8px 24px 0 rgba(9, 13, 20, 0.4), -4px -4px 8px 0 rgba(224, 224, 255, 0.04), 0 1px 1px 0 rgba(9, 13, 20, 0.4);
 				border: solid 1px rgba(245, 247, 250, 0.06);
+				box-shadow: 8px 8px 24px 0 rgba(9, 13, 20, 0.4), -4px -4px 8px 0 rgba(224, 224, 255, 0.04), 0 1px 1px 0 rgba(9, 13, 20, 0.4);
 				background-image: linear-gradient(to bottom, rgba(245, 247, 250, 0.24), rgba(245, 247, 250, 0.12) 52%, rgba(245, 247, 250, 0));
+				backdrop-filter: blur(40px);
 			}
 		}
 
@@ -728,10 +799,10 @@
 			}
 		}
 
-.is-white & {
-	box-shadow: inset 8px 8px 40px 0 rgba(9, 13, 20, 0.4), inset -4px -4px 8px 0 rgba(224, 224, 255, 0.04), inset 0 1px 1px 0 rgba(9, 13, 20, 0.4);
-	background-image: linear-gradient(to bottom, #090d14, #282a2e 53%, #2d2f33);
-}
+		.is-white & {
+			box-shadow: inset 8px 8px 40px 0 rgba(9, 13, 20, 0.4), inset -4px -4px 8px 0 rgba(224, 224, 255, 0.04), inset 0 1px 1px 0 rgba(9, 13, 20, 0.4);
+			background-image: linear-gradient(to bottom, #090d14, #282a2e 53%, #2d2f33);
+		}
 
 		@include mobile {
 			width: 100%;
@@ -751,15 +822,15 @@
 		font-size: vc(16);
 		line-height: vc(28);
 		color: rgba(20, 16, 41, 0.8);
-		cursor: pointer;
 		transition: all 0.5s linear;
-
-		.is-white & {
-			color: $color-white;
-		}
+		cursor: pointer;
 
 		&.is-active {
 			pointer-events: none;
+		}
+
+		.is-white & {
+			color: $color-white;
 		}
 
 		@include mobile {
