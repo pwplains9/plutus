@@ -42,3 +42,9 @@
 		@content;
 	}
 }
+
+@mixin isWhite {
+	.is-white & {
+		@content;
+	}
+}
