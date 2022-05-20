@@ -335,6 +335,12 @@
 				background-color: #ebeff5;
 				transition: all 0.5s $easing-smooth;
 
+				input {
+					opacity: 0;
+					position: absolute;
+					left: 0;
+				}
+
 				span {
 					display: block;
 					border-radius: 10px;

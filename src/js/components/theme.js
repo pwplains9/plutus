@@ -54,9 +54,11 @@ const init = () => {
 
 	button.on('click', (e) => {
 		if (!vars.$html.hasClass('is-white')) {
+			console.log('dark')
 			dark();
 
 		} else {
+			console.log('light')
 			light();
 		}
 	});
