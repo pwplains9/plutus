@@ -44,6 +44,8 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+
+
 	}
 
 	&__title {
@@ -82,6 +84,7 @@
 		margin-top: 15px;
 	}
 }
+
 .select {
 	display: flex;
 	align-items: center;
@@ -101,6 +104,24 @@
 
 	.is-white & {
 		background-color: #2d2f33;
+	}
+
+	&--offer {
+		margin: 0 auto 24px;
+		padding: vc(6) vc(8) vc(6) vc(12);
+		width: vc(456);
+		font-weight: 600;
+		font-size: vc(14);
+		line-height: vc(24);
+		background: rgba(20, 16, 41, 0.04);
+
+		@include isWhite {
+			background: rgba(224, 224, 255, 0.04);
+		}
+
+		@include mobile {
+			width: 100%;
+		}
 	}
 }
 .filter {

@@ -52,3 +52,30 @@ if ($('.tabs').length) {
 			});
 	});
 }
+
+if ($('.card__navs').length) {
+	let $tabNav = helpers.$document.find('.card__nav');
+
+	$tabNav.on('click', (event) => {
+		const $this = $(event.currentTarget);
+
+		$tabNav.removeClass('is-current');
+
+		$this.addClass('is-current');
+
+		gsap.timeline()
+			.to(helpers.$document.find('.card__tab.is-active'), 0.5, {
+					autoAlpha: 0,
+					clearProps: true,
+				}
+			)
+			.call(() => {
+				helpers.$document.find('.card__tab').addClass('is-hidden').removeClass('is-active');
+				helpers.$document.find(`.card__tab[data-tab='${$this.data('tab')}']`).removeClass('is-hidden').addClass('is-active');
+			})
+			.from(helpers.$document.find(`.card__tab[data-tab='${$this.data('tab')}']`), 0.5, {
+				autoAlpha: 0,
+				clearProps: true,
+			});
+	});
+}

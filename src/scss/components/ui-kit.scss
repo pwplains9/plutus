@@ -533,6 +533,16 @@
 		}
 	}
 
+	&--load {
+		#{$self}__inner {
+			padding: 6px 0;
+			width: vc(110);
+			font-weight: 600;
+			font-size: 14px;
+			line-height: 24px;
+		}
+	}
+
 	.is-white & {
 		background-image: none;
 		background-color: #3d5b66;

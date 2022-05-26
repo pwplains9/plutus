@@ -14,8 +14,9 @@
 		margin-right: vc(24);
 		border-radius: 40px;
 		padding: vc(36) vc(8) vc(8);
-		width: 536px;
-		height: 966px;
+		width: vc(536);
+
+		//height: 966px;
 		box-shadow: 0 8px 8px -4px rgba(20, 16, 41, 0.06), 0 2px 4px -1px rgba(20, 16, 41, 0.06), 0 0 1px 0 rgba(20, 16, 41, 0.12);
 		background-color: #fff;
 
@@ -40,7 +41,7 @@
 		display: flex;
 		align-items: center;
 		margin: vc(4) vc(4) vc(4) 0;
-		padding: 0 32px;
+		padding: 0 vc(32);
 		font-weight: 600;
 		font-size: vc(13);
 		line-height: vc(16);
@@ -138,6 +139,10 @@
 			display: flex;
 			font-family: $font-Gilroy;
 
+			.card__info-offer {
+				height: vc(24);
+			}
+
 			span {
 				display: block;
 				width: vc(119);
@@ -149,15 +154,167 @@
 			}
 		}
 
+		&-left {
+			display: flex;
+			flex-flow: column;
+			align-items: start;
+		}
+
+		&-right {
+			.card__tab & {
+				flex-flow: column;
+				align-items: flex-end;
+				@include mobile {
+					white-space: nowrap;
+					margin-left: vc(-115);
+				}
+
+				span {
+					width: auto;
+				}
+			}
+		}
+
+		&-offer {
+			display: flex;
+			align-items: center;
+			margin-bottom: vc(4);
+			font-family: $font-Gilroy;
+			font-weight: 700;
+			font-size: vc(18);
+			line-height: vc(24);
+
+			span {
+				display: block;
+				margin: 0 vc(8);
+				border-radius: 24px;
+				padding: vc(4) vc(8);
+				font-weight: 500;
+				font-size: vc(13);
+				line-height: vc(16);
+				background: rgba(20, 16, 41, 0.04);
+
+				.card__info-right & {
+					//margin-right: 0;
+				}
+
+				@include isWhite {
+					background: rgba(224, 224, 255, 0.04);
+				}
+			}
+
+			//@include mobile {
+			//	font-size: 18px;
+			//	line-height: 24px;
+			//
+			//	span {
+			//		font-size: 13px;
+			//		line-height: 16px;
+			//	}
+			//}
+		}
+
+		&-from {
+			display: flex;
+			margin-right: vc(16);
+			font-family: $font-Gilroy;
+			font-weight: 500;
+			font-size: vc(13);
+			line-height: vc(16);
+			color: rgba(20, 16, 41, 0.6);
+
+			svg {
+				width: vc(16);
+				height: vc(16);
+			}
+
+			span {
+				padding-left: vc(3);
+
+				//font-family: $font-Montserrat;
+				color: rgba(20, 16, 41, 0.8);
+			}
+
+			&:last-child {
+				margin: 0;
+			}
+
+			@include isWhite {
+				color: rgba(224, 224, 255, 0.8);
+
+				span {
+					color: $color-white;
+				}
+			}
+		}
+
+		&-collection {
+			margin-bottom: vc(4);
+			border-radius: vc(24);
+			padding: vc(4) vc(8);
+			font-weight: 600;
+			font-size: vc(13);
+			line-height: vc(16);
+			color: #0bf;
+			background: rgba(0, 187, 255, 0.03);
+
+
+
+
+			@include isWhite {
+				color: #00FFAA;
+				background: rgba(0, 255, 170, 0.03);
+
+
+				&--mint {
+					color: #00b8b9;
+					background: rgba(0, 184, 185, 0.06);
+				}
+
+				&--transfer {
+
+				}
+
+				&--sale {
+					color: #9c42f5;
+					background: rgba(156, 66, 245, 0.06);
+				}
+
+				&--list {
+					color: #f0a;
+					background: rgba(255, 0, 170, 0.06);
+				}
+
+				&--offer {
+					color: #ff5e00;
+					background: rgba(255, 94, 0, 0.06);
+				}
+
+				&--listing {
+					color: #ffab00;
+					background: rgba(255, 171, 0, 0.06);
+				}
+
+				&--coffer {
+					color: #f54562;
+					background: rgba(245, 69, 98, 0.06);
+				}
+			}
+		}
+
+		&-bottom {
+			display: flex;
+		}
+
 		&--1 {
 			padding: vc(30) vc(32);
 		}
 
 		&--black {
-			margin-bottom: 0;
 			flex-flow: column;
-			background-color: rgba(235, 239, 245, 0.6);
+			margin-bottom: 0;
 			border-radius: 24px 24px 36px 36px;
+			background-color: rgba(235, 239, 245, 0.6);
 
 			@include isWhite {
 				background-color: rgba(9, 13, 20, 0.4);
@@ -197,6 +354,8 @@
 		font-weight: 500;
 		font-size: vc(14);
 		line-height: vc(24);
+		transition: all 0.5s $easing-smooth;
+		cursor: pointer;
 
 		&.is-current {
 			border-bottom-color: #1da1f2;
@@ -230,8 +389,8 @@
 		justify-content: space-between;
 		margin-bottom: vc(12);
 		width: 100%;
-		color: rgba(20, 16, 41, 0.6);
 		font-family: $font-Gilroy;
+		color: rgba(20, 16, 41, 0.6);
 
 		span {
 			display: flex;
@@ -303,6 +462,120 @@
 
 	&__image {
 
+	}
+
+	&__footer {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-top: vc(25);
+		margin-bottom: vc(26);
+	}
+
+	&__activitys {
+		display: flex;
+
+		margin: vc(42) vc(32) vc(20);
+
+		&-item {
+			margin-right: vc(6);
+			margin-bottom: vc(6);
+			border: 2px solid transparent;
+			border-radius: 12px;
+			padding: vc(4 ) vc(10);
+			font-weight: 500;
+			font-size: vc(14);
+			line-height: vc(24);
+			background: rgba(20, 16, 41, 0.06);
+
+			&.is-select {
+				border: 2px solid rgba(20, 16, 41, 0.8);
+				font-weight: 600;
+			}
+
+			@include isWhite {
+				background: rgba(224, 224, 255, 0.06);
+
+				&.is-select {
+					border: 2px solid $color-white;
+				}
+			}
+
+			@include mobile {
+				white-space: nowrap;
+			}
+		}
+
+		@include desktop {
+			flex-wrap: wrap;
+		}
+
+		@include mobile {
+			align-items: center;
+			margin: vc(18) vc(16);
+			overflow-y: hidden;
+			overflow-x: auto;
+			width: 98%;
+		}
+	}
+
+	&__none {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-flow: column;
+		background: rgba(235, 239, 245, 0.6);
+		border-radius: 32px;
+		width: vc(520);
+		height: vc(298);
+
+		&-icon {
+			padding: vc(4);
+			width: vc(72);
+			height: vc(72);
+			background: linear-gradient(135deg, #FFFFFF 0%, #FAFBFC 51.82%, #F5F7FA 100%);
+			box-shadow: 0px 1px 1px rgba(9, 13, 20, 0.06), -4px -4px 8px rgba(255, 255, 255, 0.4), 8px 8px 24px rgba(9, 13, 20, 0.06);
+			border-radius: 12px;
+
+			img {
+
+			}
+
+			@include isWhite {
+				background: linear-gradient(90deg, #3A3C42 0%, #2D3035 50.01%, #212429 100%);
+				border: 1px solid rgba(245, 247, 250, 0.06);
+				box-shadow: 0px 1px 1px rgba(9, 13, 20, 0.4), -4px -4px 8px rgba(224, 224, 255, 0.04), 8px 8px 24px rgba(9, 13, 20, 0.4);
+				backdrop-filter: blur(40px);
+			}
+		}
+
+		&-title {
+			margin: vc(24) 0 vc(12);
+			font-weight: 600;
+			font-size: vc(18);
+			line-height: vc(24);
+		}
+
+		&-description {
+			margin-bottom: vc(26);
+			font-weight: 500;
+			font-size: vc(13);
+			line-height: vc(16);
+			color: rgba(20, 16, 41, 0.6);
+
+			@include isWhite {
+				color: rgba(224, 224, 255, 0.8);
+			}
+		}
+
+		@include isWhite {
+			background: rgba(9, 13, 20, 0.4);
+		}
+
+		@include mobile {
+			width: vc(328);
+			height: vc(294);
+		}
 	}
 
 	@include mobile {
