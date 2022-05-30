@@ -10,6 +10,7 @@ import scrollToAnchor from './modules/scrollToAnchor';
 
 import theme from "./components/theme";
 import helpers from "./helpers";
+import vars from "./helpers";
 
 ieFix();
 vhFix();
@@ -79,3 +80,54 @@ if ($('.card__navs').length) {
 			});
 	});
 }
+
+if($('.js-connect').length) {
+
+	document.querySelector('.js-connect').addEventListener('click', (e) => {
+		e.preventDefault();
+		document.querySelector('[data-popup="connect"]').classList.remove('is-hidden');
+	})
+
+	document.querySelector('.popup__close--1').addEventListener('click', (e) => {
+		e.preventDefault();
+		document.querySelector('[data-popup="connect"]').classList.add('is-hidden');
+	})
+
+	document.querySelector('.popup__close--2').addEventListener('click', (e) => {
+		e.preventDefault();
+		document.querySelector('[data-popup="profile"]').classList.add('is-hidden');
+	})
+
+	document.querySelectorAll('.popup__item').forEach(item => {
+		item.addEventListener('click', (e) => {
+			e.preventDefault();
+
+			document.querySelector('[data-popup="profile"]').classList.remove('is-hidden');
+		})
+	})
+}
+
+
+if($('.explore__filter').length) {
+	$('.explore__filter').on('click', (event) => {
+		const $this = $(event.currentTarget);
+
+		console.log(event)
+		vars.$document.find('.explore__filter').removeClass('is-current')
+		$this.addClass('is-current');
+
+		$('.explore__title').text($this.text())
+
+		if($this.attr('data-index') === '2') {
+			$('.filter__buy, .filter__price').addClass('is-hidden');
+			$('.filter__activitys').removeClass('is-hidden');
+		} else {
+			$('.filter__buy, .filter__price').removeClass('is-hidden');
+			$('.filter__activitys').addClass('is-hidden');
+		}
+
+		vars.$document.find(`.explore__items`).addClass('is-hidden')
+		vars.$document.find(`.explore__items[data-tab="${$this.attr('data-index')}"]`).removeClass('is-hidden')
+	})
+}
+

@@ -1,0 +1,157 @@
+.popup.popup--1.is-hidden(data-popup="connect")
+	.popup__bg
+	.popup__inner.popup__inner--1
+		.popup__close.popup__close--1
+			+svg('close')
+		.popup__title
+			| Connect wallet
+		.popup__description
+			| Connect with one of our available wallet providers or create a new one
+		.popup__items
+			.popup__item
+				.popup__left
+					.popup__social
+						img(src="../images/meta-1.png")
+					.popup__text
+						| Metamask
+				.popup__stext.popup__stext--blue
+						| Popular
+			.popup__item
+				.popup__left
+					.popup__social
+						img(src="../images/meta-2.png")
+					.popup__text
+						| Coinwallet
+				.popup__right
+						|
+			.popup__item
+				.popup__left
+					.popup__social
+						img(src="../images/meta-3.png")
+					.popup__text
+						| Phantom
+				.popup__stext
+						| Solana
+			.popup__item
+				.popup__left
+					.popup__social
+						img(src="../images/meta-4.png")
+					.popup__text
+						| Glow
+				.popup__stext
+						| Solana
+			.popup__item.is-disabled
+				.popup__left
+					.popup__social
+						img(src="../images/meta-5.png")
+					.popup__text
+						| Trust
+				.popup__stext
+						| Mobile only
+		.popup__footer
+			a.button.button--transparent.button--load(href="")
+				.button__inner
+					| Load more
+
+.popup.popup--2.is-hidden(data-popup="profile")
+	.popup__bg
+	.popup__inner.popup__inner--2
+		.popup__close.popup__close--2
+			+svg('close')
+		.popup__top
+			.popup__profile
+				.popup__icon
+					img(src="../images/meta-6.png")
+				| #[span 0x…Aa3Ggf]
+			.popup__massage
+				.popup__icon.popup__icon--none
+					+svg('massage')
+		.popup__navs
+			a.popup__link(href="")
+				.popup__icon
+					+svg('album')
+				| My Items
+			a.popup__link(href="")
+				.popup__icon
+					+svg('wave')
+				| Activity
+			a.popup__link(href="")
+				.popup__icon
+					+svg('tag')
+				| Offers
+			a.popup__link(href="")
+				.popup__icon
+					+svg('sparcle')
+				| My Collections
+		.popup__import
+			.popup__icon
+				+svg('file-download')
+			| Import Listings
+		.popup__info
+			.popup__tabs
+				.popup__ntabs.is-active(data-tab="1")
+					| Your wallet
+				.popup__ntabs(data-tab="2")
+					| #[span 0x…Aa3Ggf]
+					+svg('copy')
+			.popup__external
+				+svg('external')
+		.popup__content
+			.popup__tab.is-active
+				.popup__elem
+					.popup__left
+						.popup__icon
+							img(src="../images/ethereum.png")
+						.popup__name
+							| ETH
+					.popup__price
+						| 0.00426
+				.popup__elem
+					.popup__left
+						.popup__icon
+							img(src="../images/ethereum_classic.png")
+						.popup__name
+							| ETH
+					.popup__price
+						| 0.00426
+				.popup__convert
+					| Convert ETH/WETH
+			.popup__tab.is-hidden
+				.popup__elem
+					.popup__left
+						.popup__icon
+							img(src="../images/ethereum.png")
+						.popup__name
+							| ETH
+					.popup__price
+						| 0.00426
+				.popup__elem
+					.popup__left
+						.popup__icon
+							img(src="../images/ethereum_classic.png")
+						.popup__name
+							| ETH
+					.popup__price
+						| 0.00426
+				.popup__convert
+					| Convert ETH/WETH
+		.popup__stitle
+			| Rewards to Collect
+		a.popup__elem(href="")
+			.popup__left
+				.popup__icon
+					+svg('case')
+				| Listing & Trading
+			.popup__price
+				| 12
+		a.popup__elem(href="")
+			.popup__left
+				.popup__icon
+					+svg('stack')
+				| Staking
+			.popup__price
+				| 63
+		.popup__convert
+			| Putus Rewards
+		.popup__disconect
+			| Disconect

@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
 
 // stylelint-disable no-empty-source
 @include font-face("../fonts/Montserrat-Light", "Montserrat", 300, normal);
@@ -6,13 +7,9 @@
 @include font-face("../fonts/Montserrat-Medium", "Montserrat", 500, normal);
 @include font-face("../fonts/Montserrat-SemiBold", "Montserrat", 600, normal);
 @include font-face("../fonts/Montserrat-Bold", "Montserrat", 700, normal);
-
-
 @include font-face("../fonts/Poppins-Medium", "Poppins", 500, normal);
 @include font-face("../fonts/Poppins-Bold", "Poppins", 700, normal);
 @include font-face("../fonts/Poppins-BoldItalic", "Poppins", 700, italic);
-
-
 @include font-face("../fonts/Gilroy-Light", "Gilroy", 300, normal);
 @include font-face("../fonts/Gilroy-Regular", "Gilroy", 400, normal);
 @include font-face("../fonts/Gilroy-Medium", "Gilroy", 500, normal);

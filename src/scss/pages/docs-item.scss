@@ -1,0 +1,209 @@
+.doc-item {
+	margin-top: 6px;
+	display: flex;
+	align-items: flex-start;
+
+	&__left {
+		position: relative;
+		margin-right: 96px;
+		width: 240px;
+		flex-shrink: 0;
+
+		&::after {
+			content: "";
+			position: absolute;
+			left: 0;
+
+			top: 0;
+			width: 1px;
+			height: 100%;
+			border-left: 1px solid rgba(20, 16, 41, 0.24);
+		}
+	}
+
+	&__nav {
+
+	}
+
+	&__link {
+		display: block;
+		padding: 6px 9px 6px 24px;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 24px;
+		border-left: 2px solid transparent;
+		border-radius: 0px 24px 24px 0px;
+
+		&.is-list {
+
+		}
+
+		@include desktop {
+			&:hover{
+				border-left: 2px solid #00BBFF;
+				background: rgba(20, 16, 41, 0.04);
+
+				@include isWhite {
+					border-left: 2px solid #00FFAA;
+					background: #00FFAA;
+				}
+			}
+		}
+	}
+
+	&__el {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		svg {
+			width: 20px;
+			height: 20px;
+		}
+	}
+
+	&__list {
+		display: none;
+	}
+
+	&__content {
+		width: 760px;
+	}
+
+	&__ul {
+		margin-top: 30px;
+		margin-left: 13px;
+
+		li {
+			position: relative;
+			display: flex;
+			align-items: center;
+			margin-bottom: 28px;
+
+			&:last-child {
+				margin-bottom: 54px;
+			}
+
+			&::before {
+				content: "";
+				margin-right: 16px;
+				width: 6px;
+				height: 6px;
+				border-radius: 50%;
+				background: #00BBFF;
+
+				@include isWhite {
+
+					background: #00FFAA;
+				}
+			}
+
+			a {
+				font-weight: 600;
+				font-size: 16px;
+				line-height: 15px;
+				border-bottom: 1px solid #00BBFF;
+				color: #00BBFF;
+
+				@include isWhite {
+					border-bottom: 2px solid #00FFAA;
+					color: #00FFAA;
+				}
+			}
+		}
+	}
+
+	&__image {
+		margin-bottom: 48px;
+
+		img {
+			border-radius: 24px;
+		}
+	}
+
+	&__caption {
+		margin-top: 8px;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 24px;
+		text-align: center;
+
+		color: rgba(20, 16, 41, 0.6);
+
+		@include isWhite {
+			color: rgba(224, 224, 255, 0.6);
+		}
+	}
+
+	&__ol {
+		list-style-type: decimal;
+		padding-left: 29px;
+		margin: 30px 0 49px;
+
+		li {
+			list-style-type: decimal;
+			margin-bottom: 28px;
+			padding-left: 6px;
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 28px;
+		}
+	}
+
+	&__insert {
+		margin-bottom: 66px;
+		padding: 22px 34px 1px;
+		border-left: 2px solid #00BBFF;
+
+		@include isWhite {
+			border-left: 2px solid #00FFAA;
+		}
+	}
+
+	&__block {
+		padding: 32px 36px;
+		background: rgba(20, 16, 41, 0.04);
+		mix-blend-mode: normal;
+		border-radius: 24px;
+		margin-bottom: 72px;
+		margin-top: 72px;
+
+		.title {
+			margin-bottom: 20px;
+		}
+
+		@include isWhite {
+			background: rgba(224, 224, 255, 0.04);
+		}
+	}
+
+	&__success {
+		display: flex;
+		align-items: flex-start;
+
+		margin-bottom: 30px;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 28px;
+
+
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		svg {
+			position: relative;
+			top: 2px;
+			margin-right: 11px;
+			width: 24px;
+			height: 24px;
+			color: #00BBFF;
+
+
+			@include isWhite {
+				color: #00FFAA;
+			}
+		}
+	}
+}

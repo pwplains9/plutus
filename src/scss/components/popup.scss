@@ -1,0 +1,459 @@
+.popup {
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 20;
+	overflow-y: auto;
+
+	&__inner {
+		position: relative;
+		z-index: 1;
+		margin: 72px auto;
+		padding: 40px 8px 38px;
+		background: linear-gradient(135deg, #FFFFFF 0%, #FAFBFC 51.82%, #F5F7FA 100%);
+		box-shadow: 0px 1px 1px rgba(9, 13, 20, 0.06), -4px -4px 8px rgba(255, 255, 255, 0.4), 8px 8px 24px rgba(9, 13, 20, 0.06);
+		border-radius: 40px;
+
+		&--1 {
+			width: 536px;
+		}
+
+		&--2 {
+			width: 424px;
+		}
+
+		@include isWhite {
+			background: linear-gradient(90deg, #3A3C42 0%, #2D3035 50.01%, #212429 100%);
+			border: 1px solid rgba(245, 247, 250, 0.06);
+			box-shadow: 0px 1px 1px rgba(9, 13, 20, 0.4), -4px -4px 8px rgba(224, 224, 255, 0.04), 8px 8px 24px rgba(9, 13, 20, 0.4);
+			backdrop-filter: blur(40px);
+			/* Note: backdrop-filter has minimal browser support */
+
+			border-radius: 40px;
+		}
+	}
+
+	&__bg {
+		position: fixed;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		backdrop-filter: blur(40px);
+	}
+
+	&__close {
+		position: absolute;
+		right: 46px;
+		top: 46px;
+		width: 24px;
+		height: 24px;
+		opacity: 0.24;
+		cursor: pointer;
+
+		svg {
+
+		}
+
+		&--2 {
+			right: 47px;
+			top: 52px;
+		}
+	}
+
+	&__title {
+		font-family: $font-Poppins;
+		margin-bottom: 24px;
+		padding: 0 32px;
+		font-weight: 700;
+		font-size: 30px;
+		line-height: 36px;
+		letter-spacing: -1px;
+
+	}
+
+	&__description {
+		margin-bottom: 40px;
+		padding: 0 32px;
+		width: 364px;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 28px;
+
+		color: rgba(20, 16, 41, 0.6);
+
+		@include isWhite {
+			color: #E0E0FF;
+			opacity: 0.6;
+		}
+	}
+
+	&__items {
+
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 16px 32px;
+		margin-bottom: 8px;
+		background: rgba(20, 16, 41, 0.04);
+		border-radius: 24px;
+
+		&:last-child {
+			margin-bottom: 18px;
+		}
+
+		&.is-disabled {
+			opacity: 0.24;
+		}
+
+		@include isWhite {
+			background: rgba(224, 224, 255, 0.04);
+		}
+	}
+
+	&__left {
+		display: flex;
+		align-items: center;
+	}
+
+	&__social {
+		margin-right: 16px;
+		width: 32px;
+		height: 32px;
+
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	&__text {
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 24px;
+	}
+
+	&__stext {
+		padding: 4px 8px;
+		font-weight: 600;
+		font-size: 13px;
+		line-height: 16px;
+		background: rgba(0, 187, 255, 0.03);
+		border-radius: 24px;
+
+		&--blue {
+			color: #00BBFF;
+
+			@include isWhite {
+				color: #00FFAA;
+				background: rgba(0, 255, 170, 0.03);
+			}
+		}
+
+		@include isWhite {
+			color: rgba(224, 224, 255, 0.8);
+
+			&--blue {
+				color: #00FFAA;
+				background: rgba(0, 255, 170, 0.03);
+			}
+		}
+	}
+
+	&__right {
+
+	}
+
+	&__footer {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__top {
+		display: flex;
+		align-items: center;
+		padding: 0 21px;
+		margin-bottom: 24px;
+	}
+
+	&__profile {
+		display: flex;
+		align-items: center;
+		margin-right: 24px;
+		padding: 12px 24px 12px 12px;
+		background: rgba(235, 239, 245, 0.6);
+		border-radius: 12px;
+		font-family: $font-space;
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 24px;
+
+		.popup__icon {
+
+		}
+
+		@include isWhite {
+			background: rgba(9, 13, 20, 0.4);
+		}
+	}
+
+	&__icon {
+		margin-right: 12px;
+		width: 24px;
+		height: 24px;
+
+		img, svg {
+			width: 100%;
+			height: 100%;
+		}
+
+		&--none {
+			margin: 0;
+		}
+	}
+
+	&__massage {
+		padding: 12px;
+		background: rgba(20, 16, 41, 0.04);
+		border-radius: 12px;
+
+		@include isWhite {
+			background: rgba(224, 224, 255, 0.04);
+		}
+	}
+
+	&__link {
+		display: flex;
+		align-items: center;
+		border-radius: 24px;
+		padding: 12px 29px;
+		font-weight: 600;
+		font-size: 14px;
+		line-height: 24px;
+
+		&:hover {
+			background: rgba(20, 16, 41, 0.04);
+		}
+
+		@include isWhite {
+			&:hover {
+				background: rgba(224, 224, 255, 0.04);
+			}
+		}
+	}
+
+	&__import {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: rgba(20, 16, 41, 0.04);
+		border-radius: 12px;
+		padding: 12px 0;
+		margin: 16px auto 32px;
+		width: 360px;
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 24px;
+
+		svg {
+			margin-right: 12px;
+			width: 24px;
+			height: 24px;
+		}
+
+		@include isWhite {
+			background: rgba(224, 224, 255, 0.04);
+		}
+	}
+
+	&__info {
+		position: relative;
+		padding: 32px 27px 24px 13px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		svg {
+			width: 24px;
+			height: 24px;
+		}
+
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			margin: 0 auto;
+			border-top: 1px solid rgba(20, 16, 41, 0.24);
+			width: 360px;
+
+			@include isWhite {
+				border: 1px solid rgba(224, 224, 255, 0.24);
+			}
+		}
+
+	}
+
+	&__tabs {
+		position: relative;
+		display: flex;
+		padding: 2px;
+		width: 305px;
+		height: 48px;
+		background: linear-gradient(180deg, #EBEFF5 0%, #F5F7FA 52.98%, #FFFFFF 100%);
+		box-shadow: inset 0px 1px 1px rgba(9, 13, 20, 0.06), inset -4px -4px 8px rgba(255, 255, 255, 0.4), inset 8px 8px 40px rgba(9, 13, 20, 0.06);
+		border-radius: 12px;
+
+		&::after {
+			position: absolute;
+			left: 0;
+			content: "";
+			border-radius: 10px;
+			width: 154px;
+			height: 44px;
+			background: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 0%, rgba(250, 251, 252, 0.6) 51.82%, rgba(245, 247, 250, 0.4) 100%);
+			border: 1px solid rgba(33, 36, 41, 0.06);
+			box-shadow: 0px 1px 1px rgba(9, 13, 20, 0.06), -4px -4px 8px rgba(255, 255, 255, 0.4), 8px 8px 24px rgba(9, 13, 20, 0.06);
+			backdrop-filter: blur(108.731px);
+		}
+
+		@include isWhite {
+			background: linear-gradient(180deg, #090D14 0%, #282A2E 52.98%, #2D2F33 100%);
+			box-shadow: inset 0px 1px 1px rgba(9, 13, 20, 0.4), inset -4px -4px 8px rgba(224, 224, 255, 0.04), inset 8px 8px 40px rgba(9, 13, 20, 0.4);
+			border-radius: 12px;
+
+			&::after {
+				background: linear-gradient(180deg, rgba(245, 247, 250, 0.24) 0%, rgba(245, 247, 250, 0.12) 52.14%, rgba(245, 247, 250, 0.0001) 100%);
+				border: 1px solid rgba(245, 247, 250, 0.06);
+				box-shadow: 0px 1px 1px rgba(9, 13, 20, 0.4), -4px -4px 8px rgba(224, 224, 255, 0.04), 8px 8px 24px rgba(9, 13, 20, 0.4);
+			}
+		}
+	}
+
+	&__ntabs {
+		position: relative;
+		z-index: 1;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex: 1;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 28px;
+
+		svg {
+			margin-left: 10px;
+		}
+
+		&.is-active {
+			font-weight: 500;
+		}
+	}
+
+	&__external {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: rgba(20, 16, 41, 0.04);
+		border-radius: 12px;
+		width: 48px;
+		height: 48px;
+	}
+
+	&__content {
+
+	}
+
+	&__tab {
+
+	}
+
+	&__elem {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 8px;
+		padding: 12px 35px 12px 29px;
+		background: rgba(20, 16, 41, 0.04);
+		border-radius: 24px;
+		font-weight: 600;
+		font-size: 14px;
+		line-height: 24px;
+
+		@include isWhite {
+			background: rgba(224, 224, 255, 0.04);
+		}
+	}
+
+	&__name {
+
+	}
+
+	&__price {
+		font-family: $font-Gilroy;
+	}
+
+	&__stitle {
+		position: relative;
+		margin-bottom: 16px;
+		padding: 32px 24px 0;
+		font-weight: 600;
+		font-size: 20px;
+		line-height: 28px;
+		letter-spacing: -0.4px;
+
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			margin: 0 auto;
+			border-top: 1px solid rgba(20, 16, 41, 0.24);
+			width: 360px;
+
+			@include isWhite {
+				border: 1px solid rgba(224, 224, 255, 0.24);
+			}
+		}
+	}
+
+	&__convert,
+	&__disconect {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: rgba(0, 187, 255, 0.03);
+		border-radius: 12px;
+		padding: 12px 0;
+		margin: 16px auto 32px;
+		width: 360px;
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 24px;
+		color: #00BBFF;
+
+		@include isWhite {
+			background: rgba(0, 255, 170, 0.03);
+			color: #00FFAA;
+		}
+	}
+
+	&__disconect {
+		margin-bottom: 0;
+		background: rgba(245, 69, 98, 0.03);
+		color: #F54562;
+
+		@include isWhite {
+			background: rgba(245, 69, 98, 0.03);
+			color: #F54562;
+		}
+	}
+}

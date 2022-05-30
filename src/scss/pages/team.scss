@@ -1,0 +1,102 @@
+.team {
+	&__content {
+
+		margin-top: vc(32);
+		margin-bottom: vc(48);
+
+		@include desktop {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+
+		@include mobile {
+			margin: vc(24) vc(-24);
+		}
+	}
+
+	&__inner {
+		background: $color-white;
+		padding: vc(24) vc(21);
+		border-radius: 40px;
+
+		@include isWhite {
+			background: #2D2F33;
+		}
+	}
+
+	&__item {
+		margin-bottom: vc(24);
+		width: vc(312);
+		//height: vc(236);
+
+
+		@include isWhite {
+			background: #212429;
+			border: 2px solid rgba(224, 224, 255, 0.24);
+			box-shadow: 0px 1px 1px rgba(9, 13, 20, 0.4), -4px -4px 8px rgba(224, 224, 255, 0.04), 8px 8px 24px rgba(9, 13, 20, 0.4);
+		}
+
+		@include mobile {
+			width: vc(344);
+		}
+	}
+
+	&__image {
+		position: relative;
+		width: vc(96);
+		height: vc(96);
+
+		img {
+			border-radius: 24px;
+		}
+	}
+
+	&__git {
+		position: absolute;
+
+		right: vc(-4);
+		top: vc(-6);
+		background: #141029;
+		border: 2px solid #FFFFFF;
+		border-radius: 24px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: vc(36);
+		height: vc(36);
+		color: $color-white;
+
+		svg {
+			width: vc(20);
+			height: vc(19.51);
+		}
+
+		@include isWhite {
+			background: #FFFFFF;
+			border: 2px solid #2D2F33;
+			color: #141029;
+		}
+	}
+
+	&__title {
+		margin-top: vc(24);
+		font-weight: 600;
+		font-size: vc(20);
+		line-height: vc(28);
+		letter-spacing: -0.4px;
+	}
+
+	&__description {
+		font-weight: 600;
+		font-size: vc(14);
+		line-height: vc(24);
+		color: rgba(20, 16, 41, 0.6);
+
+		@include isWhite {
+			mix-blend-mode: normal;
+			opacity: 0.6;
+			color: #E0E0FF;
+		}
+	}
+}

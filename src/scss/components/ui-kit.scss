@@ -59,6 +59,19 @@
 			line-height: vc(24);
 			letter-spacing: -1px;
 		}
+
+		&--doc {
+			margin: 31px 0 25px;
+			font-size: vc(20);
+			line-height: vc(28);
+			letter-spacing: -0.4px;
+		}
+
+		&--insert {
+			font-size: 18px;
+			line-height: 24px;
+			letter-spacing: -0.4px;
+		}
 	}
 
 	@include mobile {
@@ -78,6 +91,11 @@
 			font-size: vc(18);
 			line-height: vc(18);
 			letter-spacing: -0.4px;
+		}
+
+		&--sm {
+			font-size: vc(24);
+			line-height: vc(32);
 		}
 	}
 }
@@ -141,6 +159,13 @@
 			margin-bottom: 73px;
 			font-size: 13px;
 			line-height: 16px;
+		}
+
+		&--p {
+			margin-bottom: 30px;
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 28px;
 		}
 	}
 
@@ -331,10 +356,18 @@
 		}
 	}
 
+	&--team {
+		padding-top: vc(145);
+	}
+
 	@include mobile {
 		&--5,
 		&--3 {
 			overflow: hidden;
+		}
+
+		&--team {
+			padding-top: vc(112);
 		}
 	}
 }
@@ -540,6 +573,13 @@
 			font-weight: 600;
 			font-size: 14px;
 			line-height: 24px;
+		}
+	}
+
+	&--buy {
+		#{$self}__inner {
+			padding: 12px 24px;
+			width: 81px;
 		}
 	}
 
@@ -859,4 +899,16 @@
 
 	&__element {
 	}
+}
+
+.mb-1 {
+	margin-bottom: 31px;
+}
+
+.mb-2 {
+	margin-bottom: 46px;
+}
+
+.mb-3 {
+	margin-bottom: 24px;
 }
