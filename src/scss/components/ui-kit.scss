@@ -79,6 +79,11 @@
 			line-height: vc(18);
 			letter-spacing: -0.4px;
 		}
+
+		&--sm {
+			font-size: vc(24);
+			line-height: vc(32);
+		}
 	}
 }
 
@@ -331,10 +336,18 @@
 		}
 	}
 
+	&--team {
+		padding-top: vc(145);
+	}
+
 	@include mobile {
 		&--5,
 		&--3 {
 			overflow: hidden;
+		}
+
+		&--team {
+			padding-top: vc(112);
 		}
 	}
 }
