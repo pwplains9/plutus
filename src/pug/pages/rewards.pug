@@ -5,7 +5,7 @@ section.section
 				| Rewards
 			.text.text--xs
 				| Earn crypto just by staking, trading and listing.
-				br
+				br.for-desktop
 				| Plutust rewarding.
 			.rewards__buttons
 				a.button.button--rewards(href="")
@@ -33,9 +33,13 @@ section.section
 									| Stake Plutus
 								a.rewards__link(href="")
 									| Earn Plutus
-							.rewards__text
+
+							.rewards__text.for-desktop
 								| WETH rewards auto compound into more Plutus!
 								| Total Plutus staked: 172,426,834 ($275,882,935)
+					.rewards__text.for-mobile
+						| WETH rewards auto compound into more Plutus!
+						| Total Plutus staked: 172,426,834 ($275,882,935)
 					.rewards__center
 						.rewards__price
 							+svg('question')
@@ -56,8 +60,10 @@ section.section
 									| Stake Plutus
 								a.rewards__link(href="")
 									| Earn Plutus & WETH
-							.rewards__text
+							.rewards__text.for-desktop
 								| Total LOOKS staked:344,140,409 ($550,624,654)
+					.rewards__text.for-mobile
+						| Total LOOKS staked:344,140,409 ($550,624,654)
 					.rewards__center
 						.rewards__price
 							+svg('question')
@@ -70,9 +76,13 @@ section.section
 							| Rewards to Collect
 							+svg('chevron_down')
 	.rewards-gets
-		.title.title--sm.title--center
-			| Get the token that powers Plutus.
-		.text.text--xs.text--center.text--rewards
+		.title.title--sm.title--center.for-desktop
+			| Get the token that#[br.for-mobile] powers Plutus.
+		.title.title--sm.for-mobile
+			| Get the token that#[br.for-mobile] powers Plutus.
+		.text.text--xs.text--center.text--rewards.for-desktop
+			| Plutus helps you earn rewards. It’s neat.
+		.text.text--xs.text--rewards.for-mobile
 			| Plutus helps you earn rewards. It’s neat.
 		.rewards-gets__buttons
 			a.button.button--rewards(href="")
@@ -82,6 +92,9 @@ section.section
 				.button__inner
 					+svg('plus')
 					| Add to wallet
-		.text.text--xxs.text--center.text--gray
+		.text.text--xxs.text--center.text--gray.for-desktop
+			| The rates shown on this page are only provided for your reference: APR and APY are calculated based on current ROI.
+			| The actual rates will fluctuate a lot according to many different factors, including token prices, trading volume, liquidity, amount staked, and more.
+		.text.text--xxsr.text--gray.for-mobile
 			| The rates shown on this page are only provided for your reference: APR and APY are calculated based on current ROI.
 			| The actual rates will fluctuate a lot according to many different factors, including token prices, trading volume, liquidity, amount staked, and more.

@@ -97,6 +97,14 @@
 			font-size: vc(24);
 			line-height: vc(32);
 		}
+
+		&--doc {
+			margin-top: vc(31);
+			margin-bottom: vc(28);
+			font-size: 20px;
+			line-height: 28px;
+			letter-spacing: -0.4px;
+		}
 	}
 }
 
@@ -115,14 +123,22 @@
 	&--rewards {
 		margin-top: 20px;
 		margin-bottom: 32px;
+
+		@include mobile {
+			margin-bottom: 23px;
+		}
 	}
 
 	&--gray {
 		margin: 0 auto;
-		width: 968px;
+
 
 		.is-white & {
 			color: rgba(224, 224, 255, 0.6);
+		}
+
+		@include desktop {
+			width: 968px;
 		}
 	}
 
@@ -189,6 +205,18 @@
 		&--lg {
 			font-size: vc(16);
 			line-height: vc(24);
+		}
+
+		&--xxsr {
+			font-size: vc(13);
+			line-height: vc(16);
+		}
+
+		&--p {
+			margin-bottom: 26px;
+			font-weight: 500;
+			font-size: 14px;
+			line-height: 26px;
 		}
 	}
 }
@@ -324,6 +352,10 @@
 				padding: 0 vc(16);
 			}
 
+			&--top {
+				margin-top: vc(112);
+			}
+
 			&--slider {
 				padding: 0 vc(8);
 			}
@@ -369,6 +401,8 @@
 		&--team {
 			padding-top: vc(112);
 		}
+
+
 	}
 }
 
@@ -420,13 +454,13 @@
 	&--rewards {
 		display: block;
 		border-radius: 14px;
-		width: 142px;
+		width: vc(142);
 
 		#{$self}__inner {
 			border-radius: 14px;
 			padding: vc(12) 0;
-			width: 138px;
-			height: 48px;
+			width: vc(138);
+			height: vc(48);
 			font-size: vc(16);
 			line-height: vc(24);
 			text-align: center;
@@ -523,8 +557,8 @@
 
 	&--icon {
 		display: block;
-		margin-left: 24px;
-		width: 187px;
+		margin-left: vc(24);
+		width: vc(187);
 
 		#{$self}__inner {
 			display: flex;
@@ -532,22 +566,27 @@
 			justify-content: center;
 			border-radius: 14px;
 			padding: vc(12) 0;
-			width: 183px;
-			height: 48px;
+			width: vc(183);
+			height: vc(48);
 			font-size: vc(16);
 			line-height: vc(24);
 			text-align: center;
 
 			svg {
-				margin-right: 12px;
-				width: 24px;
-				height: 24px;
+				margin-right: vc(12);
+				width: vc(24);
+				height: vc(24);
 				color: #1da1f2;
 
 				.is-white & {
 					color: #0fa;
 				}
 			}
+		}
+
+		@include mobile {
+			margin-left: 0;
+			margin-top: vc(16);
 		}
 	}
 
@@ -895,6 +934,10 @@
 
 	&__content {
 		margin-bottom: 72px;
+
+		@include mobile {
+			margin: 0 vc(-16);
+		}
 	}
 
 	&__element {
@@ -907,8 +950,16 @@
 
 .mb-2 {
 	margin-bottom: 46px;
+
+	@include mobile {
+		margin-bottom: 49px;
+	}
 }
 
 .mb-3 {
 	margin-bottom: 24px;
+
+	@include mobile {
+		margin-bottom: 27px;
+	}
 }

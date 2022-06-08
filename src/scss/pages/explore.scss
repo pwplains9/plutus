@@ -44,8 +44,6 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-
-
 	}
 
 	&__title {
@@ -115,8 +113,8 @@
 		}
 
 		&--7 {
-			flex: 1;
 			display: flex;
+			flex: 1;
 			justify-content: flex-end;
 		}
 
@@ -136,11 +134,11 @@
 		&-item {
 			display: flex;
 			align-items: center;
-			padding: 20px 0;
 			margin-bottom: 8px;
+			border-radius: 24px;
+			padding: 20px 0;
 			width: 100%;
 			background: rgba(20, 16, 41, 0.04);
-			border-radius: 24px;
 
 			@include isWhite {
 				background: rgba(224, 224, 255, 0.04);
@@ -153,9 +151,9 @@
 			height: 48px;
 
 			img {
+				border-radius: 12px;
 				width: 100%;
 				height: 100%;
-				border-radius: 12px;
 			}
 		}
 
@@ -169,12 +167,11 @@
 			line-height: 24px;
 
 			&--offer {
-
-				color: #FF5E00;
+				color: #ff5e00;
 			}
 
 			&--list {
-				color: #FF00AA;
+				color: #f0a;
 			}
 		}
 
@@ -186,7 +183,6 @@
 
 			@include isWhite {
 				color: rgba(224, 224, 255, 0.6);
-
 			}
 		}
 
@@ -217,10 +213,6 @@
 		height: 24px;
 	}
 
-	.is-white & {
-		background-color: #2d2f33;
-	}
-
 	&--offer {
 		margin: 0 auto 24px;
 		padding: vc(6) vc(8) vc(6) vc(12);
@@ -237,6 +229,14 @@
 		@include mobile {
 			width: 100%;
 		}
+	}
+
+	.is-white & {
+		background-color: #2d2f33;
+	}
+
+	@include mobile {
+		width: 100%;
 	}
 }
 
@@ -492,9 +492,9 @@
 
 		@include mobile {
 			align-items: center;
-			margin: vc(18) vc(16);
-			overflow-y: hidden;
 			overflow-x: auto;
+			overflow-y: hidden;
+			margin: vc(18) vc(16);
 			width: 98%;
 		}
 	}
@@ -662,6 +662,4 @@
 		border: solid 1px rgba(245, 247, 250, 0.06);
 		box-shadow: 8px 8px 24px 0 rgba(9, 13, 20, 0.4), -4px -4px 8px 0 rgba(224, 224, 255, 0.04), 0 1px 1px 0 rgba(9, 13, 20, 0.4);
 	}
-
-
 }

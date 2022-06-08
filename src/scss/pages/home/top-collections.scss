@@ -159,7 +159,7 @@
 				text-transform: uppercase;
 
 				.top-collections__text--bold {
-					padding-right: 5px;
+					padding-right: vc(5);
 					font-family: $font-Gilroy;
 					color: rgba(20, 16, 41, 0.6);
 
@@ -180,7 +180,7 @@
 
 			&--6 {
 				order: 7;
-				margin: 0 8px;
+				margin: 0 vc(8);
 			}
 
 			&--7 {
@@ -194,18 +194,18 @@
 				flex-flow: column;
 				align-items: center;
 				justify-content: center;
-				margin-top: 12px;
-				border-radius: 12px;
-				padding: 12px 0;
-				width: 104px;
-				height: 64px;
+				margin-top: vc(12);
+				border-radius: vc(12);
+				padding: vc(12) 0;
+				width: vc(104);
+				height: vc(64);
 				text-align: center;
 				background-color: rgba(20, 16, 41, 0.04);
 
 				.top-collections__text {
 					&:first-child {
-						font-size: 16px;
-						line-height: 20px;
+						font-size: vc(16);
+						line-height: vc(20);
 					}
 				}
 
@@ -228,8 +228,8 @@
 
 		@include mobile {
 			margin-right: vc(12);
-			width: 24px;
-			height: 24px;
+			width: vc(24);
+			height: vc(24);
 
 			img {
 				border-radius: 8px;
@@ -275,8 +275,8 @@
 		&--voll {
 			font-family: $font-Montserrat;
 			font-weight: 600;
-			font-size: 14px;
-			line-height: 24px;
+			font-size: vc(14);
+			line-height: vc(24);
 			color: rgba(20, 16, 41, 0.6);
 
 			.is-white & {
@@ -289,12 +289,12 @@
 		}
 
 		@include mobile {
-			font-size: 13px;
-			line-height: 20px;
+			font-size: vc(13);
+			line-height: vc(20);
 
 			.top-collections__col--image & {
-				font-size: 14px;
-				line-height: 24px;
+				font-size: vc(14);
+				line-height: vc(24);
 			}
 		}
 	}
@@ -312,6 +312,6 @@
 	}
 
 	@include mobile {
-		margin-top: 50px;
+		margin-top: vc(50);
 	}
 }

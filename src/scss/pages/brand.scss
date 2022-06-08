@@ -1,5 +1,6 @@
 .brand {
-	margin-top: 144px;
+	margin-top: vc(144);
+
 	img {
 		width: 100%;
 		height: 100%;
@@ -7,46 +8,59 @@
 	}
 
 	&__top {
-		margin-bottom: 76px;
+		margin-bottom: vc(76);
 		border-bottom: solid 1px rgba(20, 16, 41, 0.24);
-		padding-bottom: 47px;
+		padding-bottom: vc(47);
 
 		@include isWhite {
 			border-bottom: solid 1px rgba(224, 224, 255, 0.24);
 		}
+
+		@include mobile {
+			margin-bottom: vc(25);
+			padding-bottom: vc(23);
+		}
 	}
 
 	&__info {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
+		@include desktop {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
 	}
 
 	&__title {
 		font-weight: 600;
-		font-size: 24px;
-		line-height: 32px;
+		font-size: vc(24);
+		line-height: vc(32);
 		letter-spacing: -1px;
+
+		@include mobile {
+			font-size: vc(20);
+			line-height: vc(28);
+			letter-spacing: -0.4px;
+		}
 	}
 
 	&__download {
 		display: inline-flex;
 		align-items: center;
 		border-radius: 12px;
-		padding: 8px 16px 8px 8px;
+		padding: vc(8) vc(16) vc(8) vc(8);
 		font-weight: 600;
-		font-size: 14px;
-		line-height: 20px;
+		font-size: vc(14);
+		line-height: vc(20);
 		background-color: #f5f7fa;
 
 		svg {
-			margin: 0 8px 0 0;
-			width: 24px;
-			height: 24px;
+			margin: 0 vc(8) 0 0;
+			width: vc(24);
+			height: vc(24);
 		}
 
 		&--icons {
-			padding: 8px 24px;
+			padding: vc(8) vc(24);
 
 			svg {
 				margin-right: 0;
@@ -56,33 +70,85 @@
 		@include isWhite {
 			background-color: #2d2f33;
 		}
+
+		@include mobile {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-top: vc(32);
+			margin-bottom: vc(47);
+			padding: vc(12);
+			width: vc(296);
+			font-size: vc(16);
+			line-height: vc(24);
+
+			&--icons {
+				margin-top: 0;
+				margin-bottom: 0;
+				padding: vc(8);
+				width: auto;
+			}
+		}
 	}
 
 	&__content {
-		display: flex;
-		justify-content: space-between;
-		margin-top: 32px;
-		margin-bottom: 72px;
+		margin-top: vc(32);
+		margin-bottom: vc(72);
 
 		&--2 {
-			margin-bottom: 24px;
+			margin-bottom: vc(24);
+		}
+
+		@include desktop {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		@include mobile {
+			margin: vc(16) vc(-24);
+
+			&--2 {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+
+				//margin: vc(16) vc(-24);
+			}
+
+			&--3,
+			&--4,
+			&--5 {
+				margin-top: vc(-16);
+				margin-bottom: vc(53);
+			}
+
+			&--5 {
+				margin-bottom: vc(23);
+			}
 		}
 	}
 
 	&__logos {
 		border-radius: 40px;
-		padding: 24px;
+		padding: vc(24);
 		box-shadow: 0 8px 8px -4px rgba(20, 16, 41, 0.06), 0 2px 4px -1px rgba(20, 16, 41, 0.06), 0 0 1px 0 rgba(20, 16, 41, 0.12);
 		background-color: #fff;
 
 		&-in {
 			display: flex;
-			height: 304px;
 
 			&--center {
 				flex-flow: column;
 				align-items: center;
 				justify-content: center;
+
+				@include mobile {
+					margin-top: vc(20);
+				}
+			}
+
+			@include desktop {
+				height: vc(304);
 			}
 		}
 
@@ -94,16 +160,16 @@
 
 		&-text {
 			font-weight: 600;
-			font-size: 14px;
-			line-height: 20px;
+			font-size: vc(14);
+			line-height: vc(20);
 			color: rgba(20, 16, 41, 0.8);
 
 			span {
 				display: block;
 				font-family: $font-Gilroy;
 				font-weight: 500;
-				font-size: 14px;
-				line-height: 20px;
+				font-size: vc(14);
+				line-height: vc(20);
 				color: rgba(20, 16, 41, 0.6);
 			}
 
@@ -114,21 +180,41 @@
 					color: $color-white;
 				}
 			}
+
+			@include mobile {
+				span {
+					text-transform: uppercase;
+				}
+
+				@include isWhite {
+					color: $color-white;
+
+					span {
+						color: rgba(224, 224, 255, 0.6);
+					}
+				}
+			}
 		}
 
 		&--1 {
-			width: 536px;
-			height: 392px;
+			@include desktop {
+				width: vc(536);
+				height: vc(392);
+			}
 		}
 
 		&--2 {
-			width: 424px;
-			height: 392px;
+			@include desktop {
+				width: vc(424);
+				height: vc(392);
+			}
 		}
 
 		&--3 {
-			width: 312px;
-			height: 392px;
+			@include desktop {
+				width: vc(312);
+				height: vc(392);
+			}
 		}
 
 		@include isWhite {
@@ -138,32 +224,59 @@
 			background-color: transparent;
 			backdrop-filter: blur(40px);
 		}
+
+		@include mobile {
+			margin-bottom: vc(8);
+		}
 	}
 
 	&__logo {
-
-
 		&--1 {
-			margin: 0 24px 48px 0;
-			width: 256px;
-			height: 256px;
+			margin: 0 vc(24) vc(48) 0;
+
+			@include desktop {
+				width: vc(256);
+				height: vc(256);
+			}
+
+			@include mobile {
+				margin: 0 vc(18) vc(17) 0;
+				width: vc(120);
+				height: vc(120);
+			}
 		}
 
 		&--2 {
-			margin-right: 24px;
-			width: 96px;
-			height: 96px;
+			margin-right: vc(24);
+
+			@include desktop {
+				width: vc(96);
+				height: vc(96);
+			}
+
+			@include mobile {
+				margin-right: vc(v);
+				width: vc(64);
+				height: vc(64);
+			}
 		}
 
 		&--3 {
-			width: 40px;
-			height: 40px;
+			@include desktop {
+				width: vc(40);
+				height: vc(40);
+			}
+
+			@include mobile {
+				width: vc(36);
+				height: vc(36);
+			}
 		}
 
 		&--4 {
 			display: flex;
 			align-items: center;
-			margin-bottom: 24px;
+			margin-bottom: vc(24);
 			font-weight: 700;
 			font-size: vc(24);
 			line-height: vc(32);
@@ -171,9 +284,15 @@
 			color: rgba(20, 16, 41, 0.8);
 
 			img {
-				margin-right: 8px;
-				width: 39px;
-				height: 39px;
+				margin-right: vc(8);
+				width: vc(39);
+				height: vc(39);
+			}
+
+			@include mobile {
+				&:last-child {
+					margin-bottom: vc(35);
+				}
 			}
 		}
 
@@ -191,7 +310,7 @@
 			align-items: center;
 
 			img {
-				height: 40px;
+				height: vc(40);
 			}
 		}
 
@@ -264,35 +383,35 @@
 		display: flex;
 		align-items: flex-end;
 		border-radius: 40px;
-		padding: 24px;
+		padding: vc(24);
 		font-family: $font-Gilroy;
 		font-weight: 500;
-		font-size: 14px;
-		line-height: 20px;
+		font-size: vc(14);
+		line-height: vc(20);
 		color: $color-white;
 
 		span {
 			display: block;
 			font-family: $font-Montserrat;
 			font-weight: 600;
-			font-size: 14px;
-			line-height: 20px;
+			font-size: vc(14);
+			line-height: vc(20);
 			color: $color-white;
 		}
 
 		&--small {
-			width: 200px;
-			height: 300px;
+			width: vc(200);
+			height: vc(300);
 		}
 
 		&--line {
-			width: 648px;
-			height: 72px;
+			width: vc(648);
+			height: vc(72);
 		}
 
 		&--md {
-			width: 424px;
-			height: 300px;
+			width: vc(424);
+			height: vc(300);
 		}
 
 		&--1,
@@ -388,21 +507,68 @@
 		}
 
 		&--19 {
-			margin-left: 441px;
-			width: 424px;
-			height: 72px;
+			margin-left: vc(441);
+			width: vc(424);
+			height: vc(72);
 			background-image: linear-gradient(to right, #99d8ff 0%, #0bf 100%);
+		}
+
+		@include mobile {
+			margin-bottom: vc(8);
+
+			&--1,
+			&--2,
+			&--3,
+			&--4,
+			&--7,
+			&--8,
+			&--9,
+			&--10,
+			&--11,
+			&--111,
+			&--13,
+			&--14,
+			&--15,
+			&--16,
+			&--17,
+			&--171 {
+				width: vc(168);
+				height: vc(200);
+			}
+
+			&--5 {
+				width: vc(344);
+				height: vc(200);
+			}
+
+			&--6,
+			&--12,
+			&--18,
+			&--19 {
+				margin: 0 auto;
+				width: vc(344);
+				height: vc(48);
+			}
 		}
 	}
 
 	&__grays {
 		font-weight: 500;
-		font-size: 16px;
-		line-height: 24px;
+		font-size: vc(16);
+		line-height: vc(24);
 		color: rgba(20, 16, 41, 0.6);
 
 		@include isWhite {
 			color: rgba(224, 224, 255, 0.6);
 		}
+
+		@include mobile {
+			font-size: vc(14);
+			line-height: vc(24);
+		}
+	}
+
+	@include mobile {
+		margin-top: vc(112);
 	}
 }

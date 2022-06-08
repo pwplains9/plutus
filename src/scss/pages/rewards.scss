@@ -1,32 +1,35 @@
 .rewards {
-	width: 100vw;
 	overflow: hidden;
-	padding-top: 150px;
-	padding-bottom: 70px;
+	padding-top: vc(150);
+	padding-bottom: vc(70);
+	width: 100vw;
+
 	//background: url("../images/04_backgrounds/bg_shape@2x.png") center center no-repeat;
 	//background-size: cover;
 
 	&::before {
-		content: "";
-		position: absolute;
-		left: 50%;
-		top: 0;
-		z-index: -1;
-		display: block;
-		width: 1920px;
-		height: 663.8px;
-		background: url("../images/04_backgrounds/bg_shape@2x.png") center center no-repeat;
-		background-size: contain;
-		transform: translateX(-50%);
+		@include desktop {
+			content: "";
+			position: absolute;
+			left: 50%;
+			top: 0;
+			z-index: -1;
+			display: block;
+			width: vc(1920);
+			height: vc(663.8);
+			background: url("../images/04_backgrounds/bg_shape@2x.png") center center no-repeat;
+			background-size: contain;
+			transform: translateX(-50%);
+		}
 	}
 
 	&__stitle {
-		margin-bottom: 20px;
+		margin-bottom: vc(20);
 	}
 
 	&__filters {
 		display: flex;
-		margin-top: 48px;
+		margin-top: vc(48);
 		border-bottom: solid 1px rgba(20, 16, 41, 0.12);
 
 		.is-white & {
@@ -36,10 +39,10 @@
 
 	&__filter {
 		border-bottom: 2px solid transparent;
-		padding: 10px 16px;
+		padding: vc(10) vc(16);
 		font-weight: 500;
-		font-size: 14px;
-		line-height: 24px;
+		font-size: vc(14);
+		line-height: vc(24);
 
 		&.is-current {
 			border-bottom-color: #0fa;
@@ -54,16 +57,28 @@
 	&__left {
 		display: flex;
 		align-items: center;
-		height: 80px;
+		height: vc(80);
 	}
 
 	&__center {
-		padding: 29px 0 0;
+		@include desktop {
+			padding: vc(29) 0 0;
+		}
+
+		@include mobile {
+			margin-top: vc(24);
+		}
 	}
 
 	&__buttons {
-		display: flex;
-		margin-top: 34px;
+		@include desktop {
+			display: flex;
+			margin-top: vc(34);
+		}
+
+		@include mobile {
+			margin-top: vc(23);
+		}
 	}
 
 	&__items {
@@ -72,11 +87,12 @@
 
 	&__item {
 		display: flex;
+
 		//align-items: center;
 		justify-content: space-between;
-		margin-top: 24px;
-		border-radius: 40px;
-		padding: 32px;
+		margin-top: vc(24);
+		border-radius: vc(40);
+		padding: vc(32);
 		box-shadow: 0 8px 8px -4px rgba(20, 16, 41, 0.06), 0 2px 4px -1px rgba(20, 16, 41, 0.06), 0 0 1px 0 rgba(20, 16, 41, 0.12);
 		background-image: linear-gradient(123deg, rgba(245, 247, 250, 0.12), rgba(245, 247, 250, 0.06) 52%, rgba(245, 247, 250, 0) 100%);
 		background-color: $color-white;
@@ -88,6 +104,12 @@
 			background-image: linear-gradient(96deg, rgba(245, 247, 250, 0.12), rgba(245, 247, 250, 0.06) 52%, rgba(245, 247, 250, 0) 100%);
 			background-color: transparent;
 		}
+
+		@include mobile {
+			display: block;
+			margin: vc(9) vc(-24) vc(8);
+			padding: vc(24);
+		}
 	}
 
 	&__image {
@@ -95,19 +117,20 @@
 		flex-shrink: 0;
 		align-items: center;
 		justify-content: center;
-		margin-right: 32px;
+		margin-right: vc(32);
+
 		//margin-top: 5px;
 		border-radius: 12px;
-		width: 80px;
-		height: 80px;
+		width: vc(80);
+		height: vc(80);
 
 		&--1 {
 			border: solid 2px #212429;
 			background-image: linear-gradient(135deg, #ef0, #0fa 52%, #00b8b9);
 
 			svg {
-				width: 48px;
-				height: 48px;
+				width: vc(48);
+				height: vc(48);
 			}
 		}
 
@@ -116,8 +139,20 @@
 			background-image: linear-gradient(to bottom, #090d14, #282a2e 53%, #2d2f33);
 
 			img {
-				width: 36px;
-				height: 39px;
+				width: vc(36);
+				height: vc(39);
+			}
+		}
+
+		@include mobile {
+			margin-right: vc(16);
+			width: vc(48);
+			height: vc(48);
+
+			img,
+			svg {
+				width: vc(24);
+				height: vc(24);
 			}
 		}
 	}
@@ -127,38 +162,60 @@
 	}
 
 	&__title {
-		margin-bottom: 12px;
+		margin-bottom: vc(12);
 		font-weight: 600;
-		font-size: 18px;
-		line-height: 24px;
+		font-size: vc(18);
+		line-height: vc(24);
 		letter-spacing: -0.4px;
+
+		@include mobile {
+			position: relative;
+			top: vc(9);
+		}
 	}
 
 	&__links {
-		margin-bottom: 8px;
+		margin-bottom: vc(8);
 	}
 
 	&__link {
-		margin-right: 12px;
+		margin-right: vc(12);
 		border-bottom: 1px solid #1da1f2;
 		font-weight: 500;
-		font-size: 13px;
-		line-height: 16px;
-
+		font-size: vc(13);
+		line-height: vc(16);
 		color: #1da1f2;
 
+		&:last-child {
+			margin-right: 0;
+		}
+
 		.is-white & {
-			color: #0fa;
 			border-bottom: 1px solid #0fa;
+			color: #0fa;
 		}
 	}
 
 	&__text {
 		//margin-bottom: -10px;
-		width: 327px;
+
 		font-weight: 500;
-		font-size: 13px;
-		line-height: 16px;
+		font-size: vc(13);
+		line-height: vc(16);
+
+		@include desktop {
+			width: vc(327);
+		}
+
+		@include mobile {
+			margin: 8px 0 0;
+			border-bottom: 1px solid rgba(20, 16, 41, 0.24);
+			padding-bottom: vc(23);
+
+			@include isWhite {
+				border-bottom: 1px solid rgba(224, 224, 255, 0.24);
+			}
+		}
 	}
 
 	&__price {
@@ -166,58 +223,89 @@
 		align-items: center;
 		font-family: $font-Gilroy;
 		font-weight: 600;
-		font-size: 24px;
-		line-height: 24px;
+		font-size: vc(24);
+		line-height: vc(24);
 
 		svg {
-			margin-right: 8px;
-			width: 24px;
-			height: 24px;
+			margin-right: vc(8);
+			width: vc(24);
+			height: vc(24);
 		}
 	}
 
 	&__stakes {
-		width: 504px;
+		width: vc(504);
+
+		@include mobile {
+			width: 100%;
+		}
 	}
 
 	&__select {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		margin-bottom: 8px;
+		margin-bottom: vc(8);
 		border-radius: 12px;
-		padding: 28px;
-		width: 504px;
-		height: 80px;
+		padding: vc(28);
+		width: vc(504);
+		height: vc(80);
 		background-color: rgba(20, 16, 41, 0.06);
 
 		svg {
-			width: 24px;
-			height: 24px;
+			width: vc(24);
+			height: vc(24);
+		}
+
+		&:last-child {
+			margin-bottom: 0;
 		}
 
 		.is-white & {
 			background-color: rgba(224, 224, 255, 0.06);
 		}
 
-		&:last-child {
-			margin-bottom: 0;
+		@include mobile {
+			margin-top: vc(24);
+			padding: vc(12) vc(16);
+			width: 100%;
+			height: auto;
+			font-weight: 600;
+			font-size: vc(16);
+			line-height: vc(24);
 		}
+	}
+
+	@include mobile {
+		overflow: hidden;
+		padding-top: vc(112);
+		padding-bottom: vc(40);
+		background: url("../images/04_backgrounds/bg_shape@2x-m.png")  vc(123) vc(-125) no-repeat;
+		background-size: 121%;
 	}
 }
 
 .rewards-gets {
-
-	padding-top: 76px;
+	padding-top: vc(76);
 	padding-bottom: 1px;
 	background-image: radial-gradient(circle at 50% 0, #fff, #fafbfc 21%, #ebeff5 44%);
 
 	&__buttons {
-		display: flex;
-		justify-content: center;
+		@include desktop {
+			display: flex;
+			justify-content: center;
+		}
+
+		@include mobile {
+			margin-bottom: vc(48);
+		}
 	}
 
 	.is-white & {
 		background-image: radial-gradient(circle at 50% 0, #2d2f33, #282a2e 21%, #090d14 44%);
+	}
+
+	@include mobile {
+		padding: vc(48) vc(32) vc(52);
 	}
 }

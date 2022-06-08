@@ -83,17 +83,17 @@ if ($('.card__navs').length) {
 
 if($('.js-connect').length) {
 
-	document.querySelector('.js-connect').addEventListener('click', (e) => {
+	$('.js-connect').on('click', (e) => {
 		e.preventDefault();
 		document.querySelector('[data-popup="connect"]').classList.remove('is-hidden');
 	})
 
-	document.querySelector('.popup__close--1').addEventListener('click', (e) => {
+	$('.popup__close--1').on('click', (e) => {
 		e.preventDefault();
 		document.querySelector('[data-popup="connect"]').classList.add('is-hidden');
 	})
 
-	document.querySelector('.popup__close--2').addEventListener('click', (e) => {
+	$('.popup__close--2').on('click', (e) => {
 		e.preventDefault();
 		document.querySelector('[data-popup="profile"]').classList.add('is-hidden');
 	})

@@ -1,23 +1,23 @@
 .doc-item {
-	margin-top: 6px;
-	display: flex;
-	align-items: flex-start;
+
+	margin-top: vc(6);
 
 	&__left {
-		position: relative;
-		margin-right: 96px;
-		width: 240px;
-		flex-shrink: 0;
+		@include desktop {
+			position: relative;
+			flex-shrink: 0;
+			margin-right: vc(96);
+			width: vc(240);
 
-		&::after {
-			content: "";
-			position: absolute;
-			left: 0;
-
-			top: 0;
-			width: 1px;
-			height: 100%;
-			border-left: 1px solid rgba(20, 16, 41, 0.24);
+			&::after {
+				content: "";
+				position: absolute;
+				left: 0;
+				top: 0;
+				border-left: 1px solid rgba(20, 16, 41, 0.24);
+				width: 1px;
+				height: 100%;
+			}
 		}
 	}
 
@@ -27,25 +27,25 @@
 
 	&__link {
 		display: block;
-		padding: 6px 9px 6px 24px;
-		font-weight: 500;
-		font-size: 14px;
-		line-height: 24px;
 		border-left: 2px solid transparent;
-		border-radius: 0px 24px 24px 0px;
+		border-radius: 0 vc(24) vc(24) 0;
+		padding: vc(6) vc(9) vc(6) vc(24);
+		font-weight: 500;
+		font-size: vc(14);
+		line-height: vc(24);
 
 		&.is-list {
 
 		}
 
 		@include desktop {
-			&:hover{
-				border-left: 2px solid #00BBFF;
+			&:hover {
+				border-left: 2px solid #0bf;
 				background: rgba(20, 16, 41, 0.04);
 
 				@include isWhite {
-					border-left: 2px solid #00FFAA;
-					background: #00FFAA;
+					border-left: 2px solid #0fa;
+					background: #0fa;
 				}
 			}
 		}
@@ -57,8 +57,8 @@
 		justify-content: space-between;
 
 		svg {
-			width: 20px;
-			height: 20px;
+			width: vc(20);
+			height: vc(20)
 		}
 	}
 
@@ -67,67 +67,96 @@
 	}
 
 	&__content {
-		width: 760px;
+		@include desktop {
+			width: vc(760);
+		}
+
+		@include mobile {
+			margin-top: 31px;
+		}
 	}
 
 	&__ul {
-		margin-top: 30px;
-		margin-left: 13px;
+		margin-top: vc(30);
+		margin-left: vc(13);
 
 		li {
 			position: relative;
 			display: flex;
 			align-items: center;
-			margin-bottom: 28px;
-
-			&:last-child {
-				margin-bottom: 54px;
-			}
+			margin-bottom: vc(28);
 
 			&::before {
 				content: "";
-				margin-right: 16px;
-				width: 6px;
-				height: 6px;
+				margin-right: vc(16);
 				border-radius: 50%;
-				background: #00BBFF;
+				width: vc(6);
+				height: vc(6);
+				background: #0bf;
 
 				@include isWhite {
-
-					background: #00FFAA;
+					background: #0fa;
 				}
 			}
 
 			a {
+				border-bottom: 1px solid #0bf;
 				font-weight: 600;
-				font-size: 16px;
-				line-height: 15px;
-				border-bottom: 1px solid #00BBFF;
-				color: #00BBFF;
+				font-size: vc(16);
+				line-height: vc(15);
+				color: #0bf;
+				white-space: nowrap;
 
 				@include isWhite {
-					border-bottom: 2px solid #00FFAA;
-					color: #00FFAA;
+					border-bottom: 2px solid #0fa;
+					color: #0fa;
+				}
+
+				@include mobile {
+					font-size: 14px;
+					line-height: 13px;
 				}
 			}
+
+			&:last-child {
+				margin-bottom: vc(54);
+			}
+
+			@include mobile {
+				margin-bottom: vc(23);
+			}
+		}
+
+		@include mobile {
+			margin: 27px 0px;
 		}
 	}
 
 	&__image {
-		margin-bottom: 48px;
+		margin-bottom: vc(48);
 
 		img {
-			border-radius: 24px;
+			border-radius: vc(24);
+		}
+
+		@include mobile {
+			margin: 0 vc(-24) vc(83);
+			height: 165px;
+
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
 		}
 	}
 
 	&__caption {
-		margin-top: 8px;
+		margin-top: vc(8);
 		font-weight: 500;
-		font-size: 14px;
-		line-height: 24px;
+		font-size: vc(14);
+		line-height: vc(24);
 		text-align: center;
-
 		color: rgba(20, 16, 41, 0.6);
 
 		@include isWhite {
@@ -137,73 +166,103 @@
 
 	&__ol {
 		list-style-type: decimal;
-		padding-left: 29px;
-		margin: 30px 0 49px;
+		margin: vc(30) 0 vc(49);
+		padding-left: vc(29);
 
 		li {
 			list-style-type: decimal;
-			margin-bottom: 28px;
-			padding-left: 6px;
+			margin-bottom: vc(28);
+			padding-left: vc(6);
 			font-weight: 500;
-			font-size: 16px;
-			line-height: 28px;
+			font-size: vc(16);
+			line-height: vc(28);
+
+			@include mobile {
+				margin-bottom: 24px;
+				font-size: 14px;
+				line-height: 26px;
+			}
+		}
+
+		@include mobile {
+			margin: 19px -15px;
 		}
 	}
 
 	&__insert {
-		margin-bottom: 66px;
-		padding: 22px 34px 1px;
-		border-left: 2px solid #00BBFF;
+		margin-bottom: vc(66);
+		border-left: 2px solid #0bf;
+		padding: vc(22) vc(34) 1px;
 
 		@include isWhite {
-			border-left: 2px solid #00FFAA;
+			border-left: 2px solid #0fa;
+		}
+
+		@include mobile {
+			padding: 25px 30px 1px;
+			margin: 49px -32px;
 		}
 	}
 
 	&__block {
-		padding: 32px 36px;
+		margin-top: vc(72);
+		margin-bottom: vc(72);
+		border-radius: vc(24);
+		padding: vc(32) vc(36);
 		background: rgba(20, 16, 41, 0.04);
 		mix-blend-mode: normal;
-		border-radius: 24px;
-		margin-bottom: 72px;
-		margin-top: 72px;
 
 		.title {
-			margin-bottom: 20px;
+			margin-bottom: vc(20);
+
+			@include mobile {
+				margin-bottom: vc(26);
+			}
 		}
 
 		@include isWhite {
 			background: rgba(224, 224, 255, 0.04);
+		}
+
+		@include mobile {
+			padding: vc(24) vc(28);
+			margin: 0 vc(-24) vc(8);
 		}
 	}
 
 	&__success {
 		display: flex;
 		align-items: flex-start;
-
-		margin-bottom: 30px;
+		margin-bottom: vc(30);
 		font-weight: 500;
-		font-size: 16px;
-		line-height: 28px;
-
-
-
-		&:last-child {
-			margin-bottom: 0;
-		}
+		font-size: vc(16);
+		line-height: vc(28);
 
 		svg {
 			position: relative;
 			top: 2px;
-			margin-right: 11px;
-			width: 24px;
-			height: 24px;
-			color: #00BBFF;
-
+			margin-right: vc(11);
+			width: vc(24);
+			height: vc(24);
+			color: #0bf;
 
 			@include isWhite {
-				color: #00FFAA;
+				color: #0fa;
+			}
+
+			@include mobile {
+				margin-right: vc(7);
+				left: -4px;
 			}
 		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	@include desktop {
+		display: flex;
+		align-items: flex-start;
 	}
 }

@@ -5,7 +5,7 @@ section.section.brand
 		.brand__info
 			.brand__title
 				| Logo
-			a.brand__download(href="../all.zip" download)
+			a.brand__download(href="../all.zip" download).for-desktop
 				+svg('file-download')
 				| Download all
 		.brand__content.brand__content--1
@@ -22,9 +22,11 @@ section.section.brand
 					.brand__logos-text
 						| 00_mark
 						span 1 logo, 3 sizes, png
-					a.brand__download(href="../00_mark.zip" download)
+					a.brand__download(href="../00_mark.zip" download).for-desktop
 						+svg('file-download')
 						| Download zip
+					a.brand__download.brand__download--icons(href="../00_mark.zip" download).for-mobile
+						+svg('file-download')
 			.brand__logos.brand__logos--2
 				.brand__logos-in.brand__logos-in--center
 
@@ -38,9 +40,11 @@ section.section.brand
 					.brand__logos-text
 						| 01_mark+sign
 						span 1 logo, dark and light, png
-					a.brand__download(href="../01_mark+sign.zip" download)
+					a.brand__download(href="../01_mark+sign.zip" download).for-desktop
 						+svg('file-download')
 						| Download zip
+					a.brand__download.brand__download--icons(href="../01_mark+sign.zip" download).for-mobile
+						+svg('file-download')
 			.brand__logos.brand__logos--3
 				.brand__logos-in.brand__logos-in--center
 
@@ -57,6 +61,9 @@ section.section.brand
 					a.brand__download.brand__download--icons(href="../02_sign.zip" download)
 						+svg('file-download')
 
+		a.brand__download(href="../all.zip" download).for-mobile
+			+svg('file-download')
+			| Download all
 		.brand__info
 			.brand__title
 				| Logo gradient colors
@@ -81,7 +88,7 @@ section.section.brand
 					| #CF86FE
 			.brand__color.brand__color--5.brand__color--md
 
-		.brand__content
+		.brand__content.brand__content--3
 			.brand__color.brand__color--6.brand__color--line
 
 		.brand__info
@@ -114,7 +121,7 @@ section.section.brand
 				.brand__color-text
 					span 06_bg_d
 					| #212429
-		.brand__content
+		.brand__content.brand__content--4
 			.brand__color.brand__color--12.brand__color--line
 		.brand__info
 			.brand__title
@@ -146,7 +153,7 @@ section.section.brand
 				.brand__color-text
 					span 05_white
 					| #FFFFFF
-		.brand__content.brand__content--2
+		.brand__content.brand__content--2.brand__content--5
 			.brand__color.brand__color--18.brand__color--line
-		.brand__content
+		.brand__content.brand__content--4
 			.brand__color.brand__color--19.brand__color--lines
